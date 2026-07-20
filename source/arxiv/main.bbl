@@ -1,0 +1,276 @@
+\begin{thebibliography}{50}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Abdin et~al.(2024)Abdin, Aneja, Awadalla, Awadallah, Awan, Bach, Bahree, Bakhtiari, Bao, Behl, Benhaim, Bilenko, Bjorck, Bubeck, Cai, Cai, Chaudhary, Chen, Chen, Chen, Chen, Chen, Cheng, Chopra, Dai, Dixon, Eldan, Fragoso, Gao, Gao, Gao, Garg, Giorno, Goswami, Gunasekar, Haider, Hao, Hewett, Hu, Huynh, Iter, Jacobs, Javaheripi, Jin, Karampatziakis, Kauffmann, Khademi, Kim, Kim, Kurilenko, Lee, Lee, Li, Li, Liang, Liden, Lin, Lin, Liu, Liu, Liu, Liu, Liu, Luo, Madan, Mahmoudzadeh, Majercak, Mazzola, Mendes, Mitra, Modi, Nguyen, Norick, Patra, Perez-Becker, Portet, Pryzant, Qin, Radmilac, Ren, de~Rosa, Rosset, Roy, Ruwase, Saarikivi, Saied, Salim, Santacroce, Shah, Shang, Sharma, Shen, Shukla, Song, Tanaka, Tupini, Vaddamanu, Wang, Wang, Wang, Wang, Wang, Wang, Ward, Wen, Witte, Wu, Wu, Wyatt, Xiao, Xu, Xu, Xu, Xue, Yadav, Yang, Yang, Yang, Yang, Yu, Yuan, Zhang, Zhang, Zhang, Zhang, Zhang, Zhang, Zhang, and Zhou]{abdin2024phi3technicalreporthighly}
+Abdin, M., Aneja, J., Awadalla, H., Awadallah, A., Awan, A.~A., Bach, N., Bahree, A., Bakhtiari, A., Bao, J., Behl, H., Benhaim, A., Bilenko, M., Bjorck, J., Bubeck, S., Cai, M., Cai, Q., Chaudhary, V., Chen, D., Chen, D., Chen, W., Chen, Y.-C., Chen, Y.-L., Cheng, H., Chopra, P., Dai, X., Dixon, M., Eldan, R., Fragoso, V., Gao, J., Gao, M., Gao, M., Garg, A., Giorno, A.~D., Goswami, A., Gunasekar, S., Haider, E., Hao, J., Hewett, R.~J., Hu, W., Huynh, J., Iter, D., Jacobs, S.~A., Javaheripi, M., Jin, X., Karampatziakis, N., Kauffmann, P., Khademi, M., Kim, D., Kim, Y.~J., Kurilenko, L., Lee, J.~R., Lee, Y.~T., Li, Y., Li, Y., Liang, C., Liden, L., Lin, X., Lin, Z., Liu, C., Liu, L., Liu, M., Liu, W., Liu, X., Luo, C., Madan, P., Mahmoudzadeh, A., Majercak, D., Mazzola, M., Mendes, C. C.~T., Mitra, A., Modi, H., Nguyen, A., Norick, B., Patra, B., Perez-Becker, D., Portet, T., Pryzant, R., Qin, H., Radmilac, M., Ren, L., de~Rosa, G., Rosset, C., Roy, S., Ruwase, O., Saarikivi, O., Saied, A., Salim, A.,
+  Santacroce, M., Shah, S., Shang, N., Sharma, H., Shen, Y., Shukla, S., Song, X., Tanaka, M., Tupini, A., Vaddamanu, P., Wang, C., Wang, G., Wang, L., Wang, S., Wang, X., Wang, Y., Ward, R., Wen, W., Witte, P., Wu, H., Wu, X., Wyatt, M., Xiao, B., Xu, C., Xu, J., Xu, W., Xue, J., Yadav, S., Yang, F., Yang, J., Yang, Y., Yang, Z., Yu, D., Yuan, L., Zhang, C., Zhang, C., Zhang, J., Zhang, L.~L., Zhang, Y., Zhang, Y., Zhang, Y., and Zhou, X.
+\newblock Phi-3 technical report: A highly capable language model locally on your phone, 2024.
+\newblock URL \url{https://arxiv.org/abs/2404.14219}.
+
+\bibitem[Aghajanyan et~al.(2020)Aghajanyan, Zettlemoyer, and Gupta]{aghajanyan2020intrinsicdimensionalityexplainseffectiveness}
+Aghajanyan, A., Zettlemoyer, L., and Gupta, S.
+\newblock Intrinsic dimensionality explains the effectiveness of language model fine-tuning, 2020.
+\newblock URL \url{https://arxiv.org/abs/2012.13255}.
+
+\bibitem[Agrawal et~al.(2022)Agrawal, Mondal, Ghosh, and Richards]{Agrawal2022alphaReQA}
+Agrawal, K.~K., Mondal, A.~K., Ghosh, A., and Richards, B.~A.
+\newblock $\alpha$-req : Assessing representation quality in self-supervised learning by measuring eigenspectrum decay.
+\newblock In \emph{Neural Information Processing Systems}, 2022.
+\newblock URL \url{https://api.semanticscholar.org/CorpusID:258509089}.
+
+\bibitem[Allen-Zhu \& Li(2023)Allen-Zhu and Li]{allenzhu2023understandingensembleknowledgedistillation}
+Allen-Zhu, Z. and Li, Y.
+\newblock Towards understanding ensemble, knowledge distillation and self-distillation in deep learning, 2023.
+\newblock URL \url{https://arxiv.org/abs/2012.09816}.
+
+\bibitem[Atanasov et~al.(2024)Atanasov, Zavatone-Veth, and Pehlevan]{Atanasov2024ScalingAR}
+Atanasov, A., Zavatone-Veth, J.~A., and Pehlevan, C.
+\newblock Scaling and renormalization in high-dimensional regression.
+\newblock \emph{ArXiv}, abs/2405.00592, 2024.
+\newblock URL \url{https://api.semanticscholar.org/CorpusID:269484262}.
+
+\bibitem[Bartlett et~al.(2020)Bartlett, Long, Lugosi, and Tsigler]{Bartlett_2020}
+Bartlett, P.~L., Long, P.~M., Lugosi, G., and Tsigler, A.
+\newblock Benign overfitting in linear regression.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 117\penalty0 (48):\penalty0 30063–30070, April 2020.
+\newblock ISSN 1091-6490.
+\newblock \doi{10.1073/pnas.1907378117}.
+\newblock URL \url{http://dx.doi.org/10.1073/pnas.1907378117}.
+
+\bibitem[Bietti \& Mairal(2019)Bietti and Mairal]{bietti2019inductive}
+Bietti, A. and Mairal, J.
+\newblock On the inductive bias of neural tangent kernels.
+\newblock In \emph{Advances in Neural Information Processing Systems}, volume~32, 2019.
+
+\bibitem[Bordelon et~al.(2020)Bordelon, Canatar, and Pehlevan]{bordelon2020spectrum}
+Bordelon, B., Canatar, A., and Pehlevan, C.
+\newblock Spectrum dependent learning curves in kernel regression and wide neural networks.
+\newblock In \emph{Proceedings of the 37th International Conference on Machine Learning (ICML)}, pp.\  1024--1034. PMLR, 2020.
+
+\bibitem[Burns et~al.(2023)Burns, Izmailov, Kirchner, Baker, Gao, Aschenbrenner, Chen, Ecoffet, Joglekar, Leike, Sutskever, Wu, and OpenAI]{Burns2023WeaktoStrongGE}
+Burns, C., Izmailov, P., Kirchner, J.~H., Baker, B., Gao, L., Aschenbrenner, L., Chen, Y., Ecoffet, A., Joglekar, M.~R., Leike, J., Sutskever, I., Wu, J., and OpenAI.
+\newblock Weak-to-strong generalization: Eliciting strong capabilities with weak supervision.
+\newblock \emph{ArXiv}, abs/2312.09390, 2023.
+\newblock URL \url{https://api.semanticscholar.org/CorpusID:266312608}.
+
+\bibitem[Caron et~al.(2021)Caron, Touvron, Misra, J{\'e}gou, Mairal, Bojanowski, and Joulin]{caron2021emerging}
+Caron, M., Touvron, H., Misra, I., J{\'e}gou, H., Mairal, J., Bojanowski, P., and Joulin, A.
+\newblock Emerging properties in self-supervised vision transformers.
+\newblock In \emph{Proceedings of the IEEE/CVF international conference on computer vision}, pp.\  9650--9660, 2021.
+
+\bibitem[Charikar et~al.(2024)Charikar, Pabbaraju, and Shiragur]{charikar2024quantifyinggainweaktostronggeneralization}
+Charikar, M., Pabbaraju, C., and Shiragur, K.
+\newblock Quantifying the gain in weak-to-strong generalization, 2024.
+\newblock URL \url{https://arxiv.org/abs/2405.15116}.
+
+\bibitem[Deng et~al.(2009)Deng, Dong, Socher, Li, Li, and Fei-Fei]{deng2009imagenet}
+Deng, J., Dong, W., Socher, R., Li, L.-J., Li, K., and Fei-Fei, L.
+\newblock Imagenet: A large-scale hierarchical image database.
+\newblock In \emph{2009 IEEE conference on computer vision and pattern recognition}, pp.\  248--255. Ieee, 2009.
+
+\bibitem[Dieuleveut \& Bach(2016)Dieuleveut and Bach]{dieuleveut2016nonparametricstochasticapproximationlarge}
+Dieuleveut, A. and Bach, F.
+\newblock Non-parametric stochastic approximation with large step sizes, 2016.
+\newblock URL \url{https://arxiv.org/abs/1408.0361}.
+
+\bibitem[Dong et~al.(2025)Dong, Li, Li, Lee, and Lei]{dong2025discrepanciesvirtueweaktostronggeneralization}
+Dong, Y., Li, Y., Li, Y., Lee, J.~D., and Lei, Q.
+\newblock Discrepancies are virtue: Weak-to-strong generalization through lens of intrinsic dimension, 2025.
+\newblock URL \url{https://arxiv.org/abs/2502.05075}.
+
+\bibitem[Dosovitskiy et~al.(2021)Dosovitskiy, Beyer, Kolesnikov, Weissenborn, Zhai, Unterthiner, Dehghani, Minderer, Heigold, Gelly, Uszkoreit, and Houlsby]{dosovitskiy2021imageworth16x16words}
+Dosovitskiy, A., Beyer, L., Kolesnikov, A., Weissenborn, D., Zhai, X., Unterthiner, T., Dehghani, M., Minderer, M., Heigold, G., Gelly, S., Uszkoreit, J., and Houlsby, N.
+\newblock An image is worth 16x16 words: Transformers for image recognition at scale, 2021.
+\newblock URL \url{https://arxiv.org/abs/2010.11929}.
+
+\bibitem[Furlanello et~al.(2018)Furlanello, Lipton, Tschannen, Itti, and Anandkumar]{furlanello2018bornneuralnetworks}
+Furlanello, T., Lipton, Z.~C., Tschannen, M., Itti, L., and Anandkumar, A.
+\newblock Born again neural networks, 2018.
+\newblock URL \url{https://arxiv.org/abs/1805.04770}.
+
+\bibitem[Garrido et~al.(2023)Garrido, Balestriero, Najman, and Lecun]{garrido2023rankmeassessingdownstreamperformance}
+Garrido, Q., Balestriero, R., Najman, L., and Lecun, Y.
+\newblock Rankme: Assessing the downstream performance of pretrained self-supervised representations by their rank, 2023.
+\newblock URL \url{https://arxiv.org/abs/2210.02885}.
+
+\bibitem[Ge et~al.(2019)Ge, Kakade, Kidambi, and Netrapalli]{ge2019step}
+Ge, R., Kakade, S.~M., Kidambi, R., and Netrapalli, P.
+\newblock The step decay schedule: A near optimal, geometrically decaying learning rate procedure for least squares.
+\newblock In \emph{Neural Information Processing Systems}, 2019.
+
+\bibitem[Gonzalez \& Woods(2008)Gonzalez and Woods]{gonzalez2008digital}
+Gonzalez, R. and Woods, R.
+\newblock \emph{Digital Image Processing}.
+\newblock Prentice Hall, 2008.
+\newblock ISBN 9780131687288.
+\newblock URL \url{https://books.google.com.hk/books?id=8uGOnjRGEzoC}.
+
+\bibitem[Guo et~al.(2025)Guo, Yang, Zhang, Song, Wang, Zhu, Xu, Zhang, Ma, Bi, Zhang, Yu, Wu, Wu, Gou, Shao, Li, Gao, Liu, Xue, Wang, Wu, Feng, Lu, Zhao, Deng, Ruan, Dai, Chen, Ji, Li, Lin, Dai, Luo, Hao, Chen, Li, Zhang, Xu, Ding, Gao, Qu, Li, Guo, Li, Chen, Yuan, Tu, Qiu, Li, Cai, Ni, Liang, Chen, Dong, Hu, You, Gao, Guan, Huang, Yu, Wang, Zhang, Zhao, Wang, Zhang, Xu, Xia, Zhang, Zhang, Tang, Zhou, Li, Wang, Li, Tian, Huang, Zhang, Wang, Chen, Du, Ge, Zhang, Pan, Wang, Chen, Jin, Chen, Lu, Zhou, Chen, Ye, Wang, Yu, Zhou, Pan, Li, Zhou, Wu, Yun, Pei, Sun, Wang, Zeng, Liu, Liang, Gao, Yu, Zhang, Xiao, An, Liu, Wang, Chen, Nie, Cheng, Liu, Xie, Liu, Yang, Li, Su, Lin, Li, Jin, Shen, Chen, Sun, Wang, Song, Zhou, Wang, Shan, Li, Wang, Wei, Zhang, Xu, Li, Zhao, Sun, Wang, Yu, Zhang, Shi, Xiong, He, Piao, Wang, Tan, Ma, Liu, Guo, Ou, Wang, Gong, Zou, He, Xiong, Luo, You, Liu, Zhou, Zhu, Huang, Li, Zheng, Zhu, Ma, Tang, Zha, Yan, Ren, Ren, Sha, Fu, Xu, Xie, Zhang, Hao, Ma, Yan, Wu, Gu, Zhu, Liu, Li, Xie, Song,
+  Pan, Huang, Xu, Zhang, and Zhang]{Guo_2025}
+Guo, D., Yang, D., Zhang, H., Song, J., Wang, P., Zhu, Q., Xu, R., Zhang, R., Ma, S., Bi, X., Zhang, X., Yu, X., Wu, Y., Wu, Z.~F., Gou, Z., Shao, Z., Li, Z., Gao, Z., Liu, A., Xue, B., Wang, B., Wu, B., Feng, B., Lu, C., Zhao, C., Deng, C., Ruan, C., Dai, D., Chen, D., Ji, D., Li, E., Lin, F., Dai, F., Luo, F., Hao, G., Chen, G., Li, G., Zhang, H., Xu, H., Ding, H., Gao, H., Qu, H., Li, H., Guo, J., Li, J., Chen, J., Yuan, J., Tu, J., Qiu, J., Li, J., Cai, J.~L., Ni, J., Liang, J., Chen, J., Dong, K., Hu, K., You, K., Gao, K., Guan, K., Huang, K., Yu, K., Wang, L., Zhang, L., Zhao, L., Wang, L., Zhang, L., Xu, L., Xia, L., Zhang, M., Zhang, M., Tang, M., Zhou, M., Li, M., Wang, M., Li, M., Tian, N., Huang, P., Zhang, P., Wang, Q., Chen, Q., Du, Q., Ge, R., Zhang, R., Pan, R., Wang, R., Chen, R.~J., Jin, R.~L., Chen, R., Lu, S., Zhou, S., Chen, S., Ye, S., Wang, S., Yu, S., Zhou, S., Pan, S., Li, S.~S., Zhou, S., Wu, S., Yun, T., Pei, T., Sun, T., Wang, T., Zeng, W., Liu, W., Liang, W., Gao, W., Yu, W.,
+  Zhang, W., Xiao, W.~L., An, W., Liu, X., Wang, X., Chen, X., Nie, X., Cheng, X., Liu, X., Xie, X., Liu, X., Yang, X., Li, X., Su, X., Lin, X., Li, X.~Q., Jin, X., Shen, X., Chen, X., Sun, X., Wang, X., Song, X., Zhou, X., Wang, X., Shan, X., Li, Y.~K., Wang, Y.~Q., Wei, Y.~X., Zhang, Y., Xu, Y., Li, Y., Zhao, Y., Sun, Y., Wang, Y., Yu, Y., Zhang, Y., Shi, Y., Xiong, Y., He, Y., Piao, Y., Wang, Y., Tan, Y., Ma, Y., Liu, Y., Guo, Y., Ou, Y., Wang, Y., Gong, Y., Zou, Y., He, Y., Xiong, Y., Luo, Y., You, Y., Liu, Y., Zhou, Y., Zhu, Y.~X., Huang, Y., Li, Y., Zheng, Y., Zhu, Y., Ma, Y., Tang, Y., Zha, Y., Yan, Y., Ren, Z.~Z., Ren, Z., Sha, Z., Fu, Z., Xu, Z., Xie, Z., Zhang, Z., Hao, Z., Ma, Z., Yan, Z., Wu, Z., Gu, Z., Zhu, Z., Liu, Z., Li, Z., Xie, Z., Song, Z., Pan, Z., Huang, Z., Xu, Z., Zhang, Z., and Zhang, Z.
+\newblock Deepseek-r1 incentivizes reasoning in llms through reinforcement learning.
+\newblock \emph{Nature}, 645\penalty0 (8081):\penalty0 633–638, September 2025.
+\newblock ISSN 1476-4687.
+\newblock \doi{10.1038/s41586-025-09422-z}.
+\newblock URL \url{http://dx.doi.org/10.1038/s41586-025-09422-z}.
+
+\bibitem[He et~al.(2016)He, Zhang, Ren, and Sun]{he2016deep}
+He, K., Zhang, X., Ren, S., and Sun, J.
+\newblock Deep residual learning for image recognition.
+\newblock In \emph{Proceedings of the IEEE conference on computer vision and pattern recognition}, pp.\  770--778, 2016.
+
+\bibitem[Hinton et~al.(2015)Hinton, Vinyals, and Dean]{hinton2015distillingknowledgeneuralnetwork}
+Hinton, G., Vinyals, O., and Dean, J.
+\newblock Distilling the knowledge in a neural network, 2015.
+\newblock URL \url{https://arxiv.org/abs/1503.02531}.
+
+\bibitem[Ildiz et~al.(2025)Ildiz, Gozeten, Taga, Mondelli, and Oymak]{ildiz2025highdimensionalanalysisknowledgedistillation}
+Ildiz, M.~E., Gozeten, H.~A., Taga, E.~O., Mondelli, M., and Oymak, S.
+\newblock High-dimensional analysis of knowledge distillation: Weak-to-strong generalization and scaling laws, 2025.
+\newblock URL \url{https://arxiv.org/abs/2410.18837}.
+
+\bibitem[Jacot et~al.(2018)Jacot, Gabriel, and Hongler]{jacot2018neural}
+Jacot, A., Gabriel, F., and Hongler, C.
+\newblock Neural tangent kernel: Convergence and generalization in neural networks.
+\newblock In \emph{Advances in neural information processing systems}, 2018.
+
+\bibitem[Jain et~al.(2018{\natexlab{a}})Jain, Kakade, Kidambi, Netrapalli, Pillutla, and Sidford]{Jain2017}
+Jain, P., Kakade, S.~M., Kidambi, R., Netrapalli, P., Pillutla, V.~K., and Sidford, A.
+\newblock A markov chain theory approach to characterizing the minimax optimality of stochastic gradient descent (for least squares).
+\newblock Schloss Dagstuhl – Leibniz-Zentrum für Informatik, 2018{\natexlab{a}}.
+\newblock \doi{10.4230/LIPICS.FSTTCS.2017.2}.
+\newblock URL \url{https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.FSTTCS.2017.2}.
+
+\bibitem[Jain et~al.(2018{\natexlab{b}})Jain, Kakade, Kidambi, Netrapalli, and Sidford]{jain2018accelerating}
+Jain, P., Kakade, S.~M., Kidambi, R., Netrapalli, P., and Sidford, A.
+\newblock Accelerating stochastic gradient descent for least squares regression.
+\newblock In \emph{Conference on Learning Theory}, 2018{\natexlab{b}}.
+
+\bibitem[Krizhevsky et~al.(2012)Krizhevsky, Sutskever, and Hinton]{krizhevsky2012imagenet}
+Krizhevsky, A., Sutskever, I., and Hinton, G.~E.
+\newblock Imagenet classification with deep convolutional neural networks.
+\newblock \emph{Advances in neural information processing systems}, 25, 2012.
+
+\bibitem[Li et~al.(2023)Li, Deng, Wu, Zhou, and Gu]{li2023riskboundsacceleratedsgd}
+Li, X., Deng, Y., Wu, J., Zhou, D., and Gu, Q.
+\newblock Risk bounds of accelerated sgd for overparameterized linear regression, 2023.
+\newblock URL \url{https://arxiv.org/abs/2311.14222}.
+
+\bibitem[Lin et~al.(2025)Lin, Wu, Kakade, Bartlett, and Lee]{lin2025scalinglawslinearregression}
+Lin, L., Wu, J., Kakade, S.~M., Bartlett, P.~L., and Lee, J.~D.
+\newblock Scaling laws in linear regression: Compute, parameters, and data, 2025.
+\newblock URL \url{https://arxiv.org/abs/2406.08466}.
+
+\bibitem[maintainers \& contributors(2016)maintainers and contributors]{torchvision2016}
+maintainers, T. and contributors.
+\newblock Torchvision: Pytorch's computer vision library.
+\newblock \url{https://github.com/pytorch/vision}, 2016.
+
+\bibitem[Malladi et~al.(2023)Malladi, Wettig, Yu, Chen, and Arora]{malladi2023kernelbasedviewlanguagemodel}
+Malladi, S., Wettig, A., Yu, D., Chen, D., and Arora, S.
+\newblock A kernel-based view of language model fine-tuning, 2023.
+\newblock URL \url{https://arxiv.org/abs/2210.05643}.
+
+\bibitem[Medvedev et~al.(2025)Medvedev, Lyu, Yu, Arora, Li, and Srebro]{medvedev2025weaktostronggeneralizationrandomfeature}
+Medvedev, M., Lyu, K., Yu, D., Arora, S., Li, Z., and Srebro, N.
+\newblock Weak-to-strong generalization even in random feature networks, provably, 2025.
+\newblock URL \url{https://arxiv.org/abs/2503.02877}.
+
+\bibitem[Menon et~al.(2021)Menon, Rawat, Reddi, Kim, and Kumar]{menon2021statistical}
+Menon, A.~K., Rawat, A.~S., Reddi, S.~J., Kim, S., and Kumar, S.
+\newblock Statistical perspective on distillation.
+\newblock In \emph{International Conference on Machine Learning}, pp.\  7651--7662. PMLR, 2021.
+
+\bibitem[Mobahi et~al.(2020)Mobahi, Farajtabar, and Bartlett]{mobahi2020selfdistillationamplifiesregularizationhilbert}
+Mobahi, H., Farajtabar, M., and Bartlett, P.~L.
+\newblock Self-distillation amplifies regularization in hilbert space, 2020.
+\newblock URL \url{https://arxiv.org/abs/2002.05715}.
+
+\bibitem[Moniri \& Hassani(2025)Moniri and Hassani]{moniri2025mechanismsweaktostronggeneralizationtheoretical}
+Moniri, B. and Hassani, H.
+\newblock On the mechanisms of weak-to-strong generalization: A theoretical perspective, 2025.
+\newblock URL \url{https://arxiv.org/abs/2505.18346}.
+
+\bibitem[Nagarajan et~al.(2024)Nagarajan, Menon, Bhojanapalli, Mobahi, and Kumar]{nagarajan2024studentteacherdeviationsdistillationdoes}
+Nagarajan, V., Menon, A.~K., Bhojanapalli, S., Mobahi, H., and Kumar, S.
+\newblock On student-teacher deviations in distillation: does it pay to disobey?, 2024.
+\newblock URL \url{https://arxiv.org/abs/2301.12923}.
+
+\bibitem[Pan et~al.(2022)Pan, Ye, and Zhang]{pan2022eigencurveoptimallearningrate}
+Pan, R., Ye, H., and Zhang, T.
+\newblock Eigencurve: Optimal learning rate schedule for sgd on quadratic objectives with skewed hessian spectrums, 2022.
+\newblock URL \url{https://arxiv.org/abs/2110.14109}.
+
+\bibitem[Radford et~al.(2021)Radford, Kim, Hallacy, Ramesh, Goh, Agarwal, Sastry, Askell, Mishkin, Clark, et~al.]{radford2021learning}
+Radford, A., Kim, J.~W., Hallacy, C., Ramesh, A., Goh, G., Agarwal, S., Sastry, G., Askell, A., Mishkin, P., Clark, J., et~al.
+\newblock Learning transferable visual models from natural language supervision.
+\newblock In \emph{International conference on machine learning}, pp.\  8748--8763. PmLR, 2021.
+
+\bibitem[Radosavovic et~al.(2020)Radosavovic, Kosaraju, Girshick, He, and Doll{\'a}r]{radosavovic2020designing}
+Radosavovic, I., Kosaraju, R.~P., Girshick, R., He, K., and Doll{\'a}r, P.
+\newblock Designing network design spaces.
+\newblock In \emph{Proceedings of the IEEE/CVF conference on computer vision and pattern recognition}, pp.\  10428--10436, 2020.
+
+\bibitem[Stanton et~al.(2021)Stanton, Izmailov, Kirichenko, Alemi, and Wilson]{stanton2021doesknowledgedistillationreally}
+Stanton, S., Izmailov, P., Kirichenko, P., Alemi, A.~A., and Wilson, A.~G.
+\newblock Does knowledge distillation really work?, 2021.
+\newblock URL \url{https://arxiv.org/abs/2106.05945}.
+
+\bibitem[Tan \& Le(2019)Tan and Le]{tan2019efficientnet}
+Tan, M. and Le, Q.
+\newblock Efficientnet: Rethinking model scaling for convolutional neural networks.
+\newblock In \emph{International conference on machine learning}, pp.\  6105--6114. PMLR, 2019.
+
+\bibitem[Tsigler \& Bartlett(2022)Tsigler and Bartlett]{tsigler2022benignoverfittingridgeregression}
+Tsigler, A. and Bartlett, P.~L.
+\newblock Benign overfitting in ridge regression, 2022.
+\newblock URL \url{https://arxiv.org/abs/2009.14286}.
+
+\bibitem[Wang et~al.(2023)Wang, Kordi, Mishra, Liu, Smith, Khashabi, and Hajishirzi]{wang2023selfinstructaligninglanguagemodels}
+Wang, Y., Kordi, Y., Mishra, S., Liu, A., Smith, N.~A., Khashabi, D., and Hajishirzi, H.
+\newblock Self-instruct: Aligning language models with self-generated instructions, 2023.
+\newblock URL \url{https://arxiv.org/abs/2212.10560}.
+
+\bibitem[Wolf et~al.(2020)Wolf, Debut, Sanh, Chaumond, Delangue, Moi, Cistac, Rault, Louf, Funtowicz, Davison, Shleifer, von Platen, Ma, Jernite, Plu, Xu, Scao, Gugger, Drame, Lhoest, and Rush]{wolf-etal-2020-transformers}
+Wolf, T., Debut, L., Sanh, V., Chaumond, J., Delangue, C., Moi, A., Cistac, P., Rault, T., Louf, R., Funtowicz, M., Davison, J., Shleifer, S., von Platen, P., Ma, C., Jernite, Y., Plu, J., Xu, C., Scao, T.~L., Gugger, S., Drame, M., Lhoest, Q., and Rush, A.~M.
+\newblock Transformers: State-of-the-art natural language processing.
+\newblock In \emph{Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing: System Demonstrations}, pp.\  38--45, Online, October 2020. Association for Computational Linguistics.
+\newblock URL \url{https://www.aclweb.org/anthology/2020.emnlp-demos.6}.
+
+\bibitem[Wu \& Sahai(2024)Wu and Sahai]{Wu2024ProvableWG}
+Wu, D.~X. and Sahai, A.
+\newblock Provable weak-to-strong generalization via benign overfitting.
+\newblock \emph{ArXiv}, abs/2410.04638, 2024.
+\newblock URL \url{https://api.semanticscholar.org/CorpusID:273185855}.
+
+\bibitem[Wu et~al.(2022)Wu, Zou, Braverman, Gu, and Kakade]{wu2022last}
+Wu, J., Zou, D., Braverman, V., Gu, Q., and Kakade, S.
+\newblock Last iterate risk bounds of {SGD} with decaying stepsize for overparameterized linear regression.
+\newblock In \emph{International Conference on Machine Learning}, 2022.
+
+\bibitem[Zhang et~al.(2024)Zhang, Liu, Chen, and Fang]{zhang2024optimalityacceleratedsgdhighdimensional}
+Zhang, H., Liu, Y., Chen, Q., and Fang, C.
+\newblock The optimality of (accelerated) sgd for high-dimensional quadratic optimization, 2024.
+\newblock URL \url{https://arxiv.org/abs/2409.09745}.
+
+\bibitem[Zhang et~al.(2025)Zhang, Lin, Liu, and Fang]{zhang2025learningcurvesstochasticgradient}
+Zhang, H., Lin, W., Liu, Y., and Fang, C.
+\newblock Learning curves of stochastic gradient descent in kernel regression, 2025.
+\newblock URL \url{https://arxiv.org/abs/2505.22048}.
+
+\bibitem[Zhang et~al.(2017)Zhang, Song, and Qi]{zhang2017age}
+Zhang, Z., Song, Y., and Qi, H.
+\newblock Age progression/regression by conditional adversarial autoencoder.
+\newblock In \emph{Proceedings of the IEEE conference on computer vision and pattern recognition}, pp.\  5810--5818, 2017.
+
+\bibitem[Zou et~al.(2021)Zou, Wu, Braverman, Gu, and Kakade]{zou2021benign}
+Zou, D., Wu, J., Braverman, V., Gu, Q., and Kakade, S.
+\newblock Benign overfitting of constant-stepsize {SGD} for linear regression.
+\newblock In \emph{Conference on Learning Theory}, 2021.
+
+\end{thebibliography}

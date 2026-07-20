@@ -1,0 +1,11 @@
+{
+  "paper": "ykWN4LG9vE",
+  "status": "passed",
+  "tests_passed": true,
+  "publication_gate_passed": true,
+  "claim_outcomes": {
+    "claim_1": "verified",
+    "claim_2": "verified",
+    "claim_3": "verified"
+  }
+}

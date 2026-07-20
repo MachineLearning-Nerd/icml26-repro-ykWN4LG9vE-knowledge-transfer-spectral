@@ -1,0 +1,40 @@
+{
+  "paper": "ykWN4LG9vE",
+  "records": [
+    {
+      "path": "sources.json",
+      "sha256": "1f445e605fc00da295c7e873b8a810460b10c53fe31aacc63a0b5669eda2288f",
+      "bytes": 970
+    },
+    {
+      "path": "source/arxiv/main.tex",
+      "sha256": "639811b3ce58ae86a01605e5c7c618b402cd5761bece8ab5ea7ec82f1d2f3d06",
+      "bytes": 224409
+    },
+    {
+      "path": "repro/src/verify_transfer.py",
+      "sha256": "4931332dd935369c4b7d5f7f2e445df0e52ca3b3ec127dc26101e490c4e045e1",
+      "bytes": 7358
+    },
+    {
+      "path": "repro/tests/test_transfer.py",
+      "sha256": "9fbee1c8d013f4428f3c299b47c969759fa73a08d50c9267f26805f82c808346",
+      "bytes": 620
+    },
+    {
+      "path": "outputs/independent_verification.json",
+      "sha256": "86a4789ebbb0575286eb4340ce2f6652d7c2324b40d002459ef3149ec09e9de2",
+      "bytes": 1531
+    },
+    {
+      "path": ".trackio/metadata.json",
+      "sha256": "7c425096c3bc4cf2bb31ae8ddff57f779ee422f54231d482faf29c6de5fa81ed",
+      "bytes": 285
+    },
+    {
+      "path": ".trackio/logbook/pages/conclusion/page.md",
+      "sha256": "3edc0ff9cf2414d4ba324f31f34abbaa27a1fbcc55154a9be8aa7fa7714c1812",
+      "bytes": 692
+    }
+  ]
+}

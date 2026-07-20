@@ -1,0 +1,15 @@
+{
+  "openreview_id": "ykWN4LG9vE",
+  "title": "What Makes a Strong Model? A Unified Spectral Analysis of Knowledge Transfer",
+  "arxiv_id": "2606.01292",
+  "source_url": "https://export.arxiv.org/e-print/2606.01292",
+  "source_tar_sha256": "6be526270e43be790c30465ffb8c55a993b60e0195577014e0b120d468b7c36d",
+  "active_tex": "source/arxiv/main.tex",
+  "active_tex_sha256": "639811b3ce58ae86a01605e5c7c618b402cd5761bece8ab5ea7ec82f1d2f3d06",
+  "implementation": "clean-room; no author implementation was present in the accepted source archive",
+  "claims": [
+    "Unified spectral analysis of SGD transfer dynamics separates geometric mismatch, propagated teacher error, and student optimization error.",
+    "Knowledge distillation expands the weaker student's effective spectral horizon and improves high-frequency learning.",
+    "Weak-to-strong transfer uses spectral denoising: a student can filter teacher optimization noise in low-intrinsic-dimension tasks."
+  ]
+}

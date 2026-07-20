@@ -1,0 +1,56 @@
+{
+  "paper": "ykWN4LG9vE",
+  "protocol": {
+    "d": 100,
+    "N": 2000,
+    "n": 500000,
+    "trials": 64,
+    "alpha_teacher": 1.0,
+    "alpha_student": 1.5,
+    "noise_std": 0.1
+  },
+  "claim_1_geometric_decomposition": {
+    "noncommuting_subspace_cells": 9000,
+    "max_static_gap_identity_error": 9.769962616701378e-15
+  },
+  "claim_2_kd_horizon": {
+    "kd_admissible_cells": 195678,
+    "kd_positive_exponent_violations": 0,
+    "w2s_admissible_cells": 400000,
+    "w2s_positive_rate_violations": 0,
+    "median_teacher_risk": 2.058253415468074,
+    "median_direct_risk": 2.826821697221921,
+    "median_distilled_risk": 2.0902688267822818,
+    "minimum_der": 1.2158789713334486,
+    "median_der": 1.3450443559693466
+  },
+  "claim_3_w2s_denoising": {
+    "low_intrinsic_dimension": 10,
+    "checkpoints": [
+      100,
+      500,
+      2000,
+      10000,
+      100000
+    ],
+    "median_risks": {
+      "100": 0.7841391227611321,
+      "500": 0.420568187097511,
+      "2000": 0.34649295192128693,
+      "10000": 0.34129258742841817,
+      "100000": 0.3413153773179991
+    },
+    "mean_risks": {
+      "100": 0.8238286280917251,
+      "500": 0.43057546740488095,
+      "2000": 0.33932104622556786,
+      "10000": 0.3338441316273626,
+      "100000": 0.333840080281804
+    },
+    "best_student_beats_teacher_fraction": 0.859375,
+    "median_teacher_risk": 0.34131673282064023,
+    "mean_teacher_risk": 0.3338434081829824,
+    "median_best_student_risk": 0.3412764379601123,
+    "mean_best_student_risk": 0.3338107176006865
+  }
+}

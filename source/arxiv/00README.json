@@ -1,0 +1,221 @@
+{
+   "sources" : [
+      {
+         "usage" : "toplevel",
+         "filename" : "main.tex"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "example_paper.pdf"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "fig/_Content_Types_.xml"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "fig/accuracy_curves_.pdf"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "fig/combined_comparison.pdf"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "fig/cosine_similarity_vs_delta_alpha.pdf"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "fig/docProps/app.xml"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "fig/docProps/core.xml"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "fig/docProps/custom.xml"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "fig/ppt/_rels/presentation.xml.rels"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "fig/ppt/notesMasters/_rels/notesMaster1.xml.rels"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "fig/ppt/notesMasters/notesMaster1.xml"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "fig/ppt/notesSlides/_rels/notesSlide1.xml.rels"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "fig/ppt/notesSlides/notesSlide1.xml"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "fig/ppt/presProps.xml"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "fig/ppt/presentation.xml"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "fig/ppt/slideLayouts/_rels/slideLayout1.xml.rels"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "fig/ppt/slideLayouts/_rels/slideLayout10.xml.rels"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "fig/ppt/slideLayouts/_rels/slideLayout11.xml.rels"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "fig/ppt/slideLayouts/_rels/slideLayout2.xml.rels"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "fig/ppt/slideLayouts/_rels/slideLayout3.xml.rels"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "fig/ppt/slideLayouts/_rels/slideLayout4.xml.rels"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "fig/ppt/slideLayouts/_rels/slideLayout5.xml.rels"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "fig/ppt/slideLayouts/_rels/slideLayout6.xml.rels"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "fig/ppt/slideLayouts/_rels/slideLayout7.xml.rels"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "fig/ppt/slideLayouts/_rels/slideLayout8.xml.rels"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "fig/ppt/slideLayouts/_rels/slideLayout9.xml.rels"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "fig/ppt/slideLayouts/slideLayout1.xml"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "fig/ppt/slideLayouts/slideLayout10.xml"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "fig/ppt/slideLayouts/slideLayout11.xml"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "fig/ppt/slideLayouts/slideLayout2.xml"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "fig/ppt/slideLayouts/slideLayout3.xml"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "fig/ppt/slideLayouts/slideLayout4.xml"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "fig/ppt/slideLayouts/slideLayout5.xml"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "fig/ppt/slideLayouts/slideLayout6.xml"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "fig/ppt/slideLayouts/slideLayout7.xml"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "fig/ppt/slideLayouts/slideLayout8.xml"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "fig/ppt/slideLayouts/slideLayout9.xml"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "fig/ppt/slideMasters/_rels/slideMaster1.xml.rels"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "fig/ppt/slideMasters/slideMaster1.xml"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "fig/ppt/slides/_rels/slide1.xml.rels"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "fig/ppt/slides/slide1.xml"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "fig/ppt/tableStyles.xml"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "fig/ppt/theme/theme1.xml"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "fig/ppt/theme/theme2.xml"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "fig/ppt/viewProps.xml"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "fig/val_acc_comparison_20260118_151147.pdf"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "fig/w2s_ResNet18.pdf"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "fig/w2s_loss_ratio_plot.pdf"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "icml2026.bst"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "icml_numpapers.pdf"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "main.bbl"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "paper.bib"
+      }
+   ],
+   "spec_version" : 1,
+   "texlive_version" : "2025",
+   "process" : {
+      "compiler" : "pdflatex"
+   }
+}
