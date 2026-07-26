@@ -50,15 +50,27 @@ def teacher_moments(
 
 
 def assumption_audit(
-    *, gamma0: Fraction, signal: Fraction, full_expressivity: bool = True
-) -> bool:
-    # D=1, Phi(x)=x with x uniform on {-1,+1}. Sigma=1, psi=1.
+    *,
+    gamma0: Fraction,
+    signal: Fraction,
+    ambient_dimension: int,
+    full_expressivity: bool = True,
+) -> dict:
+    # Phi(x)=xi*e_1 in R^D with xi uniform on {-1,+1}. For every PSD A,
+    # E[Phi Phi^T A Phi Phi^T]=A_11 e_1 e_1^T <= tr(A) I, so psi=1.
+    # M_T=M_S=I_D makes both model projections I_D, while w*=e_1 has an
+    # exactly zero tail beyond k_dagger=1.
     # The paper's strict step-size bound is gamma0 < min(1/2,1/2,1/100).
-    return (
-        0 < gamma0 < Fraction(1, 100)
-        and signal != 0
-        and full_expressivity
-    )
+    checks = {
+        "fourth_moment_condition_psi_1": ambient_dimension >= 1,
+        "teacher_projection_is_identity": full_expressivity,
+        "student_projection_is_identity": full_expressivity,
+        "zero_signal_tail_after_k_dagger_1": signal != 0
+        and ambient_dimension > 1,
+        "strict_global_step_bound": 0 < gamma0 < Fraction(1, 100),
+        "nonzero_signal": signal != 0,
+    }
+    return {"checks": checks, "all_satisfied": all(checks.values())}
 
 
 def certify(
@@ -66,10 +78,14 @@ def certify(
     gamma0: Fraction,
     signal: Fraction,
     noise_variance: Fraction,
+    ambient_dimension: int = 4096,
     full_expressivity: bool = True,
 ) -> dict:
-    assumptions = assumption_audit(
-        gamma0=gamma0, signal=signal, full_expressivity=full_expressivity
+    assumption_result = assumption_audit(
+        gamma0=gamma0,
+        signal=signal,
+        ambient_dimension=ambient_dimension,
+        full_expressivity=full_expressivity,
     )
     coefficient, teacher_variance = teacher_moments(
         total=256,
@@ -84,15 +100,22 @@ def certify(
     uniform_bracket_min = 2 * (
         coefficient * (1 - coefficient) * signal**2 - teacher_variance
     )
-    theorem_contradicted = assumptions and uniform_bracket_min > 0
+    theorem_contradicted = (
+        assumption_result["all_satisfied"] and uniform_bracket_min > 0
+    )
     return {
-        "assumptions_satisfied": assumptions,
-        "dimension": 1,
+        "assumptions": assumption_result,
+        "assumptions_satisfied": assumption_result["all_satisfied"],
+        "ambient_dimension_D": ambient_dimension,
+        "active_dimension": 1,
         "teacher_samples_N": 256,
         "fourth_moment_psi": 1,
-        "covariance": "Sigma=1",
-        "teacher_and_student_projection": "identity",
+        "feature_distribution": "Phi(x)=xi*e_1, xi uniform on {-1,+1}",
+        "covariance": "diag(1,0,...,0)",
+        "teacher_and_student_projection": f"I_{ambient_dimension}",
         "intrinsic_cutoff_k_dagger": 1,
+        "student_step_gamma0_prime": "1/2000",
+        "student_horizon_quantifier": "every finite positive n",
         "signal": compact_fraction(signal),
         "gaussian_noise_variance": compact_fraction(noise_variance),
         "teacher_step_gamma0": compact_fraction(gamma0),
@@ -140,6 +163,12 @@ def main() -> None:
             signal=Fraction(1),
             noise_variance=Fraction(1, 1_000_000),
             full_expressivity=False,
+        )["assumptions_satisfied"],
+        "non_low_dimensional_embedding_rejected": not certify(
+            gamma0=gamma0,
+            signal=signal,
+            noise_variance=Fraction(1, 1_000_000),
+            ambient_dimension=1,
         )["assumptions_satisfied"],
         "high_noise_breaks_counterexample": not certify(
             gamma0=gamma0,

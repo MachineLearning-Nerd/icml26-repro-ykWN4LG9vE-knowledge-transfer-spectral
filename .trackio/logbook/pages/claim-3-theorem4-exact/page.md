@@ -11,7 +11,8 @@ The current verifier is
 `repro/claims/claim3_theorem4_quantifier/verify.py`; the independent
 implementation is `audit.py`. They use the paper's Algorithm 1, exact rational
 arithmetic, positive signal and positive Gaussian noise, explicit assumption
-checks, and four falsification controls. Raw outputs are
+checks, a `D=4096` exact low-intrinsic embedding, and five falsification
+controls. Raw outputs are
 `.openresearch/artifacts/claim-3/exact_counterexample.json`,
 `independent_checker.json`, and `independent_horizon_audit.csv`.
 

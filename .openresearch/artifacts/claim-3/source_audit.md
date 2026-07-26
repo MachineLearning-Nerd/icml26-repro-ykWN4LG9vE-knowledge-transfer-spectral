@@ -17,4 +17,10 @@ comparison. Those added conditions do not establish the main theorem's
 eventual universal quantifier.
 
 The counterexample uses the exact Algorithm 1 updates and step-decay schedule,
-not spectral truncation or ridge regression.
+not spectral truncation or ridge regression. The theorem states no lower bound
+on `D`, no positive-definiteness condition on the covariance, and no
+power-law-spectrum premise. We nevertheless use `D=4096`, with
+`Phi(x)=xi*e_1`, `w*=e_1`, and identity teacher/student model projections.
+For every PSD `A`, the fourth-moment left side is
+`A_11 e_1 e_1^T <= tr(A) I`, so Assumption 1 holds with `psi=1`; the exact
+signal tail after `k_dagger=1` is zero, satisfying Assumption 5.

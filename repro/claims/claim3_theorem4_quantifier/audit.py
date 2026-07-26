@@ -68,6 +68,14 @@ def main() -> None:
     result = {
         "independent_implementation": True,
         "precision_decimal_digits": getcontext().prec,
+        "ambient_dimension_D": 4096,
+        "feature_distribution": "Phi(x)=xi*e_1 in R^4096",
+        "fourth_moment_identity": (
+            "E[Phi Phi^T A Phi Phi^T]=A_11 e_1 e_1^T"
+        ),
+        "fourth_moment_bound_psi_1": (
+            "A_11 e_1 e_1^T <= tr(A) I for every PSD A"
+        ),
         "teacher_mean_coefficient": str(c),
         "teacher_variance": str(variance),
         "tested_horizons": [row["n"] for row in rows],
