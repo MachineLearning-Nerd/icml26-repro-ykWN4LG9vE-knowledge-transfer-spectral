@@ -1,0 +1,15 @@
+{
+  "independent_implementation": true,
+  "alpha_teacher": "2",
+  "alpha_student": "2",
+  "target_cutoff_N_exponent": "1/10",
+  "theorem_n_N_exponent": "1/10",
+  "reconstructed_n_N_exponent": "1/5",
+  "limiting_cutoff_exponent_theorem_route": "1/20",
+  "limiting_cutoff_exponent_reconstructed_route": "1/10",
+  "largest_horizon_theorem_slope": 0.045841885789091395,
+  "largest_horizon_reconstructed_slope": 0.09508931079993145,
+  "theorem_route_misses_target": true,
+  "reconstructed_route_approaches_target": true,
+  "audit_passed": true
+}

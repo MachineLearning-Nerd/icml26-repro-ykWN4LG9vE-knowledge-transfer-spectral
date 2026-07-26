@@ -1,0 +1,3 @@
+.openresearch/artifacts/**/*.csv binary
+evidence/**/*.csv binary
+*.svg text eol=lf

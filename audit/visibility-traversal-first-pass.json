@@ -1,0 +1,23 @@
+{
+  "review_scope": "fresh candidate artifact only",
+  "canonical_entrypoints": [
+    "README.md",
+    "logbook.json",
+    "pages/index.md"
+  ],
+  "opened_files_before_rejection": [
+    "README.md",
+    "logbook.json",
+    "pages/index.md",
+    "reports/spectral-transfer-reproduction/release-report.md",
+    "reports/spectral-transfer-reproduction/visibility-matrix.md"
+  ],
+  "broken_link_pattern": ".trackio/logbook/pages/...",
+  "broken_link_count": 11,
+  "conclusions_treated_as_inaccessible": [
+    "canonical claim-page links in the release report",
+    "claim-page and inline-data links in the visibility matrix"
+  ],
+  "visibility_gate_passed": false,
+  "disposition": "rejected and fixed before publication"
+}

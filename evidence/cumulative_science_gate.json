@@ -1,0 +1,22 @@
+{
+  "paper": "2606.01292",
+  "checks": {
+    "claim1_static_identity": true,
+    "claim1_three_part_decomposition": true,
+    "claim2_finite_corrob": true,
+    "claim2_exact_certificate": true,
+    "claim3_exact_falsification": true,
+    "claim4_exact_falsification": true,
+    "claim5_real_architecture": true,
+    "claim5_raw_predictions": true,
+    "historical_toy_not_default": true
+  },
+  "claim_verdicts": {
+    "claim_1": "VERIFIED",
+    "claim_2": "VERIFIED",
+    "claim_3": "FALSIFIED",
+    "claim_4": "FALSIFIED",
+    "claim_5": "VERIFIED"
+  },
+  "science_gate_passed": true
+}

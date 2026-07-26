@@ -1,0 +1,71 @@
+# Startup and source audit
+orx skill
+orx skill orx-experiment-tree
+orx skill orx-evidence
+orx skill orx-git
+orx skill orx-compute
+orx projects --json
+orx runs a80644ad-aba9-48d6-8f74-551d23777104
+orx project view a80644ad-aba9-48d6-8f74-551d23777104
+git branch -a
+git rev-parse HEAD
+git status --short
+df -h .
+env | cut -d= -f1 | sort
+curl -A 'OpenResearch-Reproduction/1.0' https://ar5iv.labs.arxiv.org/html/2606.01292
+curl -A 'OpenResearch-Reproduction/1.0' https://export.arxiv.org/e-print/2606.01292
+shasum -a 256 paper.html paper-source.tar
+orx paper 2606.01292 --full
+
+# Protected judged and comparative artifacts
+git clone https://huggingface.co/spaces/DineshAI/ykWN4LG9vE judged
+git -C judged checkout 39d8a32354134ce1777ce9adefe8f26e86ebc11b
+find judged -type f -not -path '*/.git/*' -print0 | sort -z | xargs -0 shasum -a 256
+git clone https://huggingface.co/spaces/amkkk/spectral-knowledge-transfer-repro reference
+git -C reference ls-files
+# The live verdict dataset was downloaded and filtered strictly by:
+# space_id == "DineshAI/ykWN4LG9vE"
+
+# Fixed experiment tree and formal runs
+orx create-experiment a80644ad-aba9-48d6-8f74-551d23777104 --title "Judged baseline with locked uv environment"
+orx project edit a80644ad-aba9-48d6-8f74-551d23777104 --run-command 'uv sync --frozen && uv run python repro/src/run_all.py'
+orx exp run bba14047-a440-478b-8cc7-3f42ec551ccb --backend hf --flavor cpu-upgrade --image ghcr.io/astral-sh/uv:python3.12-bookworm-slim
+orx exp wait bba14047-a440-478b-8cc7-3f42ec551ccb --timeout 480
+orx logs 6dd7d886-a843-4922-85d7-842acb870b37
+orx create-experiment a80644ad-aba9-48d6-8f74-551d23777104 --title "Claim 3 high-dimensional exact embedding" --parent bba14047-a440-478b-8cc7-3f42ec551ccb
+orx exp run 8e6b9eaf-d5eb-4cc1-97eb-be3c1d8c7293 --backend hf --flavor cpu-upgrade --image ghcr.io/astral-sh/uv:python3.12-bookworm-slim
+orx exp wait 8e6b9eaf-d5eb-4cc1-97eb-be3c1d8c7293 --timeout 480
+orx logs 0dfe0a37-1914-46f3-8024-e9f5f3db3ffa
+orx create-experiment a80644ad-aba9-48d6-8f74-551d23777104 --title "Claim 4 exact PGR and stopping-rate audit" --parent 8e6b9eaf-d5eb-4cc1-97eb-be3c1d8c7293
+orx exp run 546d4ac8-176d-45f9-9b60-d67c65bd3c40 --backend hf --flavor cpu-upgrade --image ghcr.io/astral-sh/uv:python3.12-bookworm-slim
+orx exp wait 546d4ac8-176d-45f9-9b60-d67c65bd3c40 --timeout 480
+orx logs 36f6aceb-e4c0-4f7f-abe3-37f9d26b4736
+orx create-experiment a80644ad-aba9-48d6-8f74-551d23777104 --title "Claim 5 UTKFace real-architecture W2S" --parent 546d4ac8-176d-45f9-9b60-d67c65bd3c40
+orx exp run 163f9e1e-7e80-4ba5-9ecc-589f52ca07b1 --backend hf --flavor cpu-upgrade --image ghcr.io/astral-sh/uv:python3.12-bookworm-slim
+orx exp wait 163f9e1e-7e80-4ba5-9ecc-589f52ca07b1 --timeout 480
+orx logs 490d55c1-62c7-45ba-a22f-0abb3693ac39
+orx create-experiment a80644ad-aba9-48d6-8f74-551d23777104 --title "Cumulative release candidate and evaluator-visible audit" --parent 163f9e1e-7e80-4ba5-9ecc-589f52ca07b1
+orx exp run 7b9934d6-a0fb-4cbd-9fc1-1746073f34fe --backend hf --flavor cpu-upgrade --image ghcr.io/astral-sh/uv:python3.12-bookworm-slim --timeout 2h
+orx exp wait 7b9934d6-a0fb-4cbd-9fc1-1746073f34fe --timeout 480
+orx logs de09d92b-ea82-4644-9341-d390cc9785b0
+orx exp desc 7b9934d6-a0fb-4cbd-9fc1-1746073f34fe --set '<final evidence summary>'
+
+# Git and local lightweight validation
+git fetch origin
+git switch -c publication/2026-07-26-claim-campaign origin/main
+uv sync --frozen
+uv run marimo check --strict notebooks/spectral_transfer_tutorial.py
+python audit/verify_release.py <fresh-candidate-directory>
+jq . logbook.json
+shasum -a 256 <exact-text-allowlist>
+git diff --check
+git status --short
+git ls-remote origin refs/heads/main
+
+# Publication and post-publication commands are appended before upload.
+huggingface_hub.HfApi.create_commit(repo_id="DineshAI/ykWN4LG9vE", repo_type="space", operations=<122 exact text files>, commit_message="Publish claim-by-claim spectral transfer reproduction")
+huggingface_hub.snapshot_download(repo_id="DineshAI/ykWN4LG9vE", repo_type="space", revision=<published revision>)
+python audit/verify_release.py <downloaded-published-revision>
+shasum -a 256 -c audit/upload-manifest.sha256
+git push origin publication/2026-07-26-claim-campaign:main
+git ls-remote origin refs/heads/main

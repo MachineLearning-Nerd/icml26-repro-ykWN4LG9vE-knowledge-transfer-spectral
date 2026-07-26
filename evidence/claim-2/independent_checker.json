@@ -1,0 +1,14 @@
+{
+  "audit_passed": true,
+  "independent_audit_cases": 240,
+  "independent_implementation": true,
+  "max_log_log_slope_error": 1.1102230246251565e-16,
+  "negative_controls": {
+    "boundary_zero_decay": true,
+    "equal_spectra_zero_kappa": true,
+    "reversed_order_negative_kappa": true,
+    "wrong_quotient_direction_negative": true
+  },
+  "power_law_tail_enclosures": 25,
+  "worst_tail_enclosure_relative_width": 1.1875380204568373e-09
+}

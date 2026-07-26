@@ -1,0 +1,21 @@
+{
+  "independent_implementation": true,
+  "precision_decimal_digits": 80,
+  "ambient_dimension_D": 4096,
+  "feature_distribution": "Phi(x)=xi*e_1 in R^4096",
+  "fourth_moment_identity": "E[Phi Phi^T A Phi Phi^T]=A_11 e_1 e_1^T",
+  "fourth_moment_bound_psi_1": "A_11 e_1 e_1^T <= tr(A) I for every PSD A",
+  "teacher_mean_coefficient": "0.06084500653384388488138651609298610679563529891244644997643233207000246673767476",
+  "teacher_variance": "3.8483017313135113454049602527701860409769951230076019150780169967426479427854126E-11",
+  "tested_horizons": [
+    256,
+    1024,
+    4096,
+    16384,
+    65536,
+    1048576
+  ],
+  "all_sampled_student_risks_above_teacher": true,
+  "gaps_decrease_toward_zero_from_above": true,
+  "audit_passed": true
+}

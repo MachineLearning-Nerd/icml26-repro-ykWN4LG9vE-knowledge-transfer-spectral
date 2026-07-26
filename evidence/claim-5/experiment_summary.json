@@ -1,0 +1,85 @@
+{
+  "claim": "Figures 2-3 real architectures and early stopping",
+  "verdict": "VERIFIED",
+  "source_sha256": "4d29b2ae21c4611695532f6fd304b22f678139a19311e21e9b65d8a6d0b00089",
+  "protocol": {
+    "dataset": "nlphuji/utk_faces",
+    "dataset_revision": "fb7f7d7102fd040c4211002b0c43e3ab727afffc",
+    "dataset_metadata_sha256": "f46078943dc84ed141b97956f49c861c5cbc5a44ac13f9349fa7b048daf237fc",
+    "dataset_images_sha256": "938b68cafa61c4f58732f312d04caa808ddd420ff24a4c9cff0c2145e8255783",
+    "total_metadata_rows": 23703,
+    "train_size": 20000,
+    "test_size": 2000,
+    "teacher_labeled_samples": 1000,
+    "teacher": "torchvision ResNet18 ImageNet-1K V1, frozen",
+    "teacher_checkpoint_sha256": "f37072fd47e89c5e827621c5baffa7500819f7896bbacec160b1a16c560e07ec",
+    "student": "official OpenAI CLIP ViT-B/32, frozen, 768-dimensional pre-projection features",
+    "student_checkpoint_sha256": "40d365715913c9da98579312b702a82c18be219cc2a73407c4526f58eba950af",
+    "student_epochs": 20,
+    "paper_primary_UTKFace_epochs": 5,
+    "extended_early_stopping_audit_epochs": 20,
+    "batch_size": 128,
+    "learning_rate": 0.0001,
+    "momentum": 0.9,
+    "ridge_alpha": 1e-06,
+    "PCA_samples": 10000,
+    "seed": 260601295
+  },
+  "results": {
+    "teacher_mse": 327.44317626953125,
+    "best_w2s_epoch": 2,
+    "best_w2s_mse": 90.92108154296875,
+    "final_w2s_mse": 104.00529479980469,
+    "best_direct_epoch": 20,
+    "best_direct_mse": 43.736568450927734,
+    "best_control_epoch": 11,
+    "best_control_mse": 356.1371154785156,
+    "best_PGR": 0.8336855336051606,
+    "best_projection_k80": 29,
+    "bootstrap": {
+      "teacher_minus_best_w2s": {
+        "mean_difference": 236.52210998535156,
+        "ci95_low": 211.81237831115723,
+        "ci95_high": 263.14850463867185,
+        "resamples": 2000
+      },
+      "final_minus_best_w2s": {
+        "mean_difference": 13.084206581115723,
+        "ci95_low": 10.067077732086181,
+        "ci95_high": 16.21927490234375,
+        "resamples": 2000
+      },
+      "control_minus_best_w2s": {
+        "mean_difference": 265.2160339355469,
+        "ci95_low": 245.24460716247557,
+        "ci95_high": 285.8396987915039,
+        "resamples": 2000
+      }
+    },
+    "real_architecture_W2S_verified": true,
+    "early_stopping_critical_verified": true,
+    "shuffled_pseudolabel_control_passed": true
+  },
+  "resource": {
+    "estimated_required_cores": 24,
+    "torch_compute_threads": 16,
+    "image_loader_workers": 8,
+    "actual_logical_cpu_allocation": 64,
+    "selected_backend": "hf",
+    "selected_flavor": "cpu-upgrade",
+    "runtime_s": 1784.2504716230324,
+    "stage_runtime_s": {
+      "download_and_extract_s": 13.157728497986682,
+      "model_load_s": 2.499558207928203,
+      "resnet18_feature_s": 581.5546472979477,
+      "clip_vit_b32_feature_s": 1166.2859149670694,
+      "linear_heads_s": 18.840776382945478,
+      "pca_projection_s": 0.1973899669246748
+    }
+  },
+  "limitations": [
+    "The paper does not publish its exact train/test indices; this run uses a pinned seeded split.",
+    "The 20-epoch early-stopping audit extends the paper's five-epoch UTKFace projection-energy protocol.",
+    "This run reproduces the real W2S arm, not the expensive ViT-L/16 fine-tuning arm of Figure 2."
+  ]
+}

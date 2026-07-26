@@ -1,0 +1,20 @@
+{
+  "all_checks_passed": true,
+  "claim": "Theorem 3 exact asymptotic DER-rate certificate",
+  "exact_perfect_power_horizon_cases": 28,
+  "exact_rational_exponent_cases": 180,
+  "exact_tail_sandwiches": 40,
+  "max_positive_kappa": "9/40",
+  "min_positive_kappa": "1/171",
+  "negative_controls": {
+    "corrupted_student_rate_rejected": true,
+    "equal_teacher_student_rejected": true,
+    "nonlearnable_boundary_rejected": true,
+    "reversed_capacity_order_rejected": true,
+    "sign_flipped_formula_rejected": true
+  },
+  "parent_guard": "59374f8c1db0c670bbe6e96fa5d4b95e852a9b85",
+  "source_scope": "Section 3.3 DER definition; Section 5 Assumptions 2-3 and Theorem 3 (Eqs. 12-13); Appendix A.6 (Eqs. 113-117); Appendix C.2 (Eq. 173)",
+  "source_sha256": "4d29b2ae21c4611695532f6fd304b22f678139a19311e21e9b65d8a6d0b00089",
+  "source_url": "https://ar5iv.labs.arxiv.org/html/2606.01292"
+}

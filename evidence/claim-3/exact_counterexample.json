@@ -1,0 +1,89 @@
+{
+  "claim": "Theorem 4 universal eventual-W2S guarantee",
+  "source_sha256": "4d29b2ae21c4611695532f6fd304b22f678139a19311e21e9b65d8a6d0b00089",
+  "source_anchor": "main.tex lines 733-745; Appendix D.1 lines 2447-2523",
+  "exact_witness": {
+    "assumptions": {
+      "checks": {
+        "fourth_moment_condition_psi_1": true,
+        "teacher_projection_is_identity": true,
+        "student_projection_is_identity": true,
+        "zero_signal_tail_after_k_dagger_1": true,
+        "strict_global_step_bound": true,
+        "nonzero_signal": true
+      },
+      "all_satisfied": true
+    },
+    "assumptions_satisfied": true,
+    "ambient_dimension_D": 4096,
+    "active_dimension": 1,
+    "teacher_samples_N": 256,
+    "fourth_moment_psi": 1,
+    "feature_distribution": "Phi(x)=xi*e_1, xi uniform on {-1,+1}",
+    "covariance": "diag(1,0,...,0)",
+    "teacher_and_student_projection": "I_4096",
+    "intrinsic_cutoff_k_dagger": 1,
+    "student_step_gamma0_prime": "1/2000",
+    "student_horizon_quantifier": "every finite positive n",
+    "signal": {
+      "decimal_17_digits": "1",
+      "sign": 1,
+      "numerator_digits": 1,
+      "denominator_digits": 1,
+      "exact_fraction_sha256": "253d950f11ebdbeb4c2d54c57803deb69869b832a2e03010620d462a85d15290"
+    },
+    "gaussian_noise_variance": {
+      "decimal_17_digits": "9.9999999999999995e-07",
+      "sign": 1,
+      "numerator_digits": 1,
+      "denominator_digits": 7,
+      "exact_fraction_sha256": "fc45f06702cc2c47095045242432398cc39645caa260cdb108e0ee2dd5829ccd"
+    },
+    "teacher_step_gamma0": {
+      "decimal_17_digits": "0.001",
+      "sign": 1,
+      "numerator_digits": 1,
+      "denominator_digits": 4,
+      "exact_fraction_sha256": "47b28fcf2ee2869b6d58e34730c0b1d2cf32ddc95d4526de4fdd85b92dc9dd66"
+    },
+    "teacher_mean_coefficient_c": {
+      "decimal_17_digits": "0.060845006533843886",
+      "sign": 1,
+      "numerator_digits": 1039,
+      "denominator_digits": 1041,
+      "exact_fraction_sha256": "08f5d9fdec0bfcf13de7dd3f31ac49058e3f0904392dfe3f59bfbe4480268911"
+    },
+    "teacher_variance_V": {
+      "decimal_17_digits": "3.8483017313135111e-11",
+      "sign": 1,
+      "numerator_digits": 2076,
+      "denominator_digits": 2087,
+      "exact_fraction_sha256": "297ecc6e9dbb16ca6a863a3d0823fe90afae91ecd7fe89f311e44cd624acca24"
+    },
+    "uniform_risk_gap_bracket_min": {
+      "decimal_17_digits": "0.11428578335051473",
+      "sign": 1,
+      "numerator_digits": 2086,
+      "denominator_digits": 2086,
+      "exact_fraction_sha256": "bc04bfb9bbf1fd71d344b0ba473caa91df61f40f5c54b2ef98aab9c682b392fb"
+    },
+    "student_risk_strictly_above_teacher_for_every_finite_n": true,
+    "limit_n_to_infinity": "student risk approaches teacher risk from above",
+    "verdict": "FALSIFIED"
+  },
+  "negative_controls": {
+    "zero_signal_rejected": true,
+    "unstable_step_rejected": true,
+    "nonexpressive_model_rejected": true,
+    "non_low_dimensional_embedding_rejected": true,
+    "high_noise_breaks_counterexample": true
+  },
+  "high_noise_control_variance": {
+    "decimal_17_digits": "2969.7718995769196",
+    "sign": 1,
+    "numerator_digits": 2079,
+    "denominator_digits": 2075,
+    "exact_fraction_sha256": "3fcd77848f1f77b09025657b3263c262d3f94ce2a3ea8025347e293ea325c618"
+  },
+  "all_checks_passed": true
+}

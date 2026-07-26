@@ -1,0 +1,233 @@
+{
+  "candidate_root": ".",
+  "canonical_entrypoints": [
+    "README.md",
+    "logbook.json",
+    "pages/index.md"
+  ],
+  "opened_files": [
+    "README.md",
+    "audit/commands-executed.txt",
+    "audit/red-team-review.md",
+    "audit/verify_release.py",
+    "audit/visibility-traversal-final.json",
+    "audit/visibility-traversal-first-pass.json",
+    "audit/visibility-traversal-second-pass.json",
+    "evidence/claim-1/EVAL.md",
+    "evidence/claim-1/claim_contract.json",
+    "evidence/claim-1/distill_results.json",
+    "evidence/claim-1/exact_command_and_environment.md",
+    "evidence/claim-1/independent_verification.json",
+    "evidence/claim-1/limitations.md",
+    "evidence/claim-1/method.md",
+    "evidence/claim-1/source_audit.md",
+    "evidence/claim-2/EVAL.md",
+    "evidence/claim-2/claim_contract.json",
+    "evidence/claim-2/exact_command_and_environment.md",
+    "evidence/claim-2/exact_der_certificate.json",
+    "evidence/claim-2/independent_checker.json",
+    "evidence/claim-2/limitations.md",
+    "evidence/claim-2/method.md",
+    "evidence/claim-2/source_audit.md",
+    "evidence/claim-3/EVAL.md",
+    "evidence/claim-3/claim_contract.json",
+    "evidence/claim-3/exact_command_and_environment.md",
+    "evidence/claim-3/exact_counterexample.json",
+    "evidence/claim-3/independent_checker.json",
+    "evidence/claim-3/independent_horizon_audit.csv",
+    "evidence/claim-3/limitations.md",
+    "evidence/claim-3/method.md",
+    "evidence/claim-3/source_audit.md",
+    "evidence/claim-4/EVAL.md",
+    "evidence/claim-4/claim_contract.json",
+    "evidence/claim-4/exact_command_and_environment.md",
+    "evidence/claim-4/exact_rate_audit.json",
+    "evidence/claim-4/independent_checker.json",
+    "evidence/claim-4/independent_cutoff_sweep.csv",
+    "evidence/claim-4/limitations.md",
+    "evidence/claim-4/method.md",
+    "evidence/claim-4/source_audit.md",
+    "evidence/claim-5/EVAL.md",
+    "evidence/claim-5/bootstrap.json",
+    "evidence/claim-5/checkpoints.csv",
+    "evidence/claim-5/claim_contract.json",
+    "evidence/claim-5/exact_command_and_environment.md",
+    "evidence/claim-5/experiment_summary.json",
+    "evidence/claim-5/independent_checker.json",
+    "evidence/claim-5/limitations.md",
+    "evidence/claim-5/method.md",
+    "evidence/claim-5/source_audit.md",
+    "evidence/claim-5/test_predictions.csv",
+    "evidence/cumulative_science_gate.json",
+    "historical/judged-39d8a32354134ce1777ce9adefe8f26e86ebc11b/PROTECTED_MANIFEST.sha256",
+    "logbook.json",
+    "notebooks/spectral_transfer_tutorial.py",
+    "pages/claim-1-geometric-decomposition/page.md",
+    "pages/claim-2-kd-horizon/page.md",
+    "pages/claim-3-theorem4-exact/page.md",
+    "pages/claim-3-w2s-denoising/page.md",
+    "pages/claim-4-theorem5-exact/page.md",
+    "pages/claim-5-real-architectures/page.md",
+    "pages/claim-theorem3-der-exact/page.md",
+    "pages/claim-w2s-recovery/page.md",
+    "pages/conclusion/page.md",
+    "pages/index.md",
+    "pages/methods/page.md",
+    "pages/negative-controls/page.md",
+    "pyproject.toml",
+    "reports/spectral-transfer-reproduction/images/01_headline_real_w2s.svg",
+    "reports/spectral-transfer-reproduction/images/02_early_stopping_curve.svg",
+    "reports/spectral-transfer-reproduction/images/03_pgr_and_projection.svg",
+    "reports/spectral-transfer-reproduction/images/04_theorem4_counterexample.svg",
+    "reports/spectral-transfer-reproduction/images/05_theorem5_rate_mismatch.svg",
+    "reports/spectral-transfer-reproduction/release-report.md",
+    "reports/spectral-transfer-reproduction/report.md",
+    "reports/spectral-transfer-reproduction/visibility-matrix.md",
+    "repro/claims/claim3_theorem4_quantifier/audit.py",
+    "repro/claims/claim3_theorem4_quantifier/run.py",
+    "repro/claims/claim3_theorem4_quantifier/verify.py",
+    "repro/claims/claim4_theorem5_rate/audit.py",
+    "repro/claims/claim4_theorem5_rate/run.py",
+    "repro/claims/claim4_theorem5_rate/verify.py",
+    "repro/claims/claim5_real_architecture/experiment.py",
+    "repro/claims/claim5_real_architecture/run.py",
+    "repro/claims/claim5_real_architecture/verify.py",
+    "repro/src/audit_theorem3_der_exact.py",
+    "repro/src/cumulative_science_gate.py",
+    "repro/src/verify_distill.py",
+    "repro/src/verify_theorem3_der_exact.py",
+    "repro/src/verify_transfer.py",
+    "repro/tests/test_transfer.py",
+    "uv.lock"
+  ],
+  "opened_file_count": 93,
+  "broken_links": [],
+  "claim_required_files_reachable": {
+    "claim-1": true,
+    "claim-2": true,
+    "claim-3": true,
+    "claim-4": true,
+    "claim-5": true
+  },
+  "judged_old_file_count": 23,
+  "judged_old_paths_subset": true,
+  "judged_bytes_current_or_archived": true,
+  "historical_checks": [
+    {
+      "path": ".gitattributes",
+      "current_exact": true,
+      "archive_exact": true
+    },
+    {
+      "path": "README.md",
+      "current_exact": false,
+      "archive_exact": true
+    },
+    {
+      "path": "bucket-icon.svg",
+      "current_exact": true,
+      "archive_exact": true
+    },
+    {
+      "path": "index.html",
+      "current_exact": true,
+      "archive_exact": true
+    },
+    {
+      "path": "logbook.css",
+      "current_exact": true,
+      "archive_exact": true
+    },
+    {
+      "path": "logbook.js",
+      "current_exact": true,
+      "archive_exact": true
+    },
+    {
+      "path": "logbook.json",
+      "current_exact": false,
+      "archive_exact": true
+    },
+    {
+      "path": "pages/claim-1-geometric-decomposition/page.md",
+      "current_exact": false,
+      "archive_exact": true
+    },
+    {
+      "path": "pages/claim-2-kd-horizon/page.md",
+      "current_exact": false,
+      "archive_exact": true
+    },
+    {
+      "path": "pages/claim-3-w2s-denoising/page.md",
+      "current_exact": true,
+      "archive_exact": true
+    },
+    {
+      "path": "pages/claim-theorem3-der-exact/page.md",
+      "current_exact": true,
+      "archive_exact": true
+    },
+    {
+      "path": "pages/claim-w2s-recovery/page.md",
+      "current_exact": true,
+      "archive_exact": true
+    },
+    {
+      "path": "pages/conclusion/page.md",
+      "current_exact": false,
+      "archive_exact": true
+    },
+    {
+      "path": "pages/index.md",
+      "current_exact": false,
+      "archive_exact": true
+    },
+    {
+      "path": "pages/methods/page.md",
+      "current_exact": false,
+      "archive_exact": true
+    },
+    {
+      "path": "pages/negative-controls/page.md",
+      "current_exact": false,
+      "archive_exact": true
+    },
+    {
+      "path": "repro/src/audit_theorem3_der_exact.py",
+      "current_exact": false,
+      "archive_exact": true
+    },
+    {
+      "path": "repro/src/verify_distill.py",
+      "current_exact": true,
+      "archive_exact": true
+    },
+    {
+      "path": "repro/src/verify_theorem3_der_exact.py",
+      "current_exact": false,
+      "archive_exact": true
+    },
+    {
+      "path": "style.css",
+      "current_exact": true,
+      "archive_exact": true
+    },
+    {
+      "path": "trackio-logo-light.png",
+      "current_exact": true,
+      "archive_exact": false
+    },
+    {
+      "path": "trackio-logo.png",
+      "current_exact": true,
+      "archive_exact": false
+    },
+    {
+      "path": "trackio-wordmark-dark.png",
+      "current_exact": true,
+      "archive_exact": false
+    }
+  ],
+  "visibility_gate_passed": true
+}

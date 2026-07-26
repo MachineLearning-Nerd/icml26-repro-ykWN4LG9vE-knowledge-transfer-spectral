@@ -1,0 +1,145 @@
+{
+  "claim": "Distillation_W2S_Thm1_Thm4_Thm5",
+  "paper": "arXiv:2606.01292",
+  "thm5_filter_sweep": [
+    {
+      "k_star": 3,
+      "R_T": 0.15474,
+      "R_T2S": 0.0408,
+      "R_oracle": 0.03318,
+      "PGR": 0.9373,
+      "w2s": true
+    },
+    {
+      "k_star": 5,
+      "R_T": 0.15474,
+      "R_T2S": 0.02588,
+      "R_oracle": 0.01353,
+      "PGR": 0.9125,
+      "w2s": true
+    },
+    {
+      "k_star": 8,
+      "R_T": 0.15474,
+      "R_T2S": 0.02541,
+      "R_oracle": 0.00562,
+      "PGR": 0.8673,
+      "w2s": true
+    },
+    {
+      "k_star": 12,
+      "R_T": 0.15474,
+      "R_T2S": 0.03242,
+      "R_oracle": 0.00254,
+      "PGR": 0.8037,
+      "w2s": true
+    },
+    {
+      "k_star": 16,
+      "R_T": 0.15474,
+      "R_T2S": 0.04226,
+      "R_oracle": 0.00141,
+      "PGR": 0.7336,
+      "w2s": true
+    },
+    {
+      "k_star": 20,
+      "R_T": 0.15474,
+      "R_T2S": 0.0523,
+      "R_oracle": 0.00088,
+      "PGR": 0.6658,
+      "w2s": true
+    },
+    {
+      "k_star": 30,
+      "R_T": 0.15474,
+      "R_T2S": 0.07732,
+      "R_oracle": 0.00033,
+      "PGR": 0.5014,
+      "w2s": true
+    },
+    {
+      "k_star": 45,
+      "R_T": 0.15474,
+      "R_T2S": 0.11604,
+      "R_oracle": 9e-05,
+      "PGR": 0.2503,
+      "w2s": true
+    },
+    {
+      "k_star": 60,
+      "R_T": 0.15474,
+      "R_T2S": 0.15474,
+      "R_oracle": 0.0,
+      "PGR": 0.0,
+      "w2s": false
+    }
+  ],
+  "best_filter": {
+    "k_star": 8,
+    "R_T": 0.15474,
+    "R_T2S": 0.02541,
+    "R_oracle": 0.00562,
+    "PGR": 0.8673,
+    "w2s": true
+  },
+  "thm4_weak_to_strong_at_best_filter": true,
+  "thm5_pgr_at_best_filter": 0.8673,
+  "thm5_recovers_majority_of_gap": true,
+  "thm1_decomposition": {
+    "I_propagated_teacher": 0.01978,
+    "II_student_optimization": 0.0,
+    "III_alignment_bias": 0.00562,
+    "sum": 0.02541,
+    "actual_R_T2S": 0.02541
+  },
+  "thm1_components_nonneg": true,
+  "thm1_sum_matches_risk": true,
+  "thm5_optimal_recovery_vs_N": [
+    {
+      "N": 40,
+      "opt_k_star": 5,
+      "R_T": 0.24642,
+      "R_T2S": 0.05152,
+      "PGR": 0.8369
+    },
+    {
+      "N": 60,
+      "opt_k_star": 3,
+      "R_T": 2.14538,
+      "R_T2S": 0.14418,
+      "PGR": 0.9475
+    },
+    {
+      "N": 100,
+      "opt_k_star": 8,
+      "R_T": 0.15201,
+      "R_T2S": 0.02516,
+      "PGR": 0.8665
+    },
+    {
+      "N": 200,
+      "opt_k_star": 12,
+      "R_T": 0.04278,
+      "R_T2S": 0.01106,
+      "PGR": 0.7884
+    },
+    {
+      "N": 400,
+      "opt_k_star": 12,
+      "R_T": 0.01795,
+      "R_T2S": 0.00625,
+      "PGR": 0.7598
+    },
+    {
+      "N": 800,
+      "opt_k_star": 16,
+      "R_T": 0.00835,
+      "R_T2S": 0.00368,
+      "PGR": 0.6729
+    }
+  ],
+  "thm5_w2s_holds_all_N": true,
+  "thm5_recovery_high_all_N": true,
+  "verdict": "supports"
+}

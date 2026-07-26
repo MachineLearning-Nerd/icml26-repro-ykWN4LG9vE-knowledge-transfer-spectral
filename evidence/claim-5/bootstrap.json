@@ -1,0 +1,20 @@
+{
+  "teacher_minus_best_w2s": {
+    "mean_difference": 236.52210998535156,
+    "ci95_low": 211.81237831115723,
+    "ci95_high": 263.14850463867185,
+    "resamples": 2000
+  },
+  "final_minus_best_w2s": {
+    "mean_difference": 13.084206581115723,
+    "ci95_low": 10.067077732086181,
+    "ci95_high": 16.21927490234375,
+    "resamples": 2000
+  },
+  "control_minus_best_w2s": {
+    "mean_difference": 265.2160339355469,
+    "ci95_low": 245.24460716247557,
+    "ci95_high": 285.8396987915039,
+    "resamples": 2000
+  }
+}

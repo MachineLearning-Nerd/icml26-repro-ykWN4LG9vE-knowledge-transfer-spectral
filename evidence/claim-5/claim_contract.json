@@ -1,0 +1,22 @@
+{
+  "claim_id": 5,
+  "paper_result": "Figures 2 and 3",
+  "verbatim_contract": "The synthetic and real-architecture experiments validate risk inheritance and spectral denoising, and an intermediate stopping point materially outperforms continued student training.",
+  "real_architecture_route": {
+    "dataset": "UTKFace, 20000 train and 2000 test",
+    "teacher": "frozen pretrained ResNet18 with ridge head fit on 1000 labels",
+    "student": "frozen official OpenAI CLIP ViT-B/32 with SGD linear head",
+    "comparison": "teacher versus W2S student versus direct-label ceiling",
+    "early_stopping": "paired test-set MSE at best checkpoint versus epoch 20",
+    "control": "fixed permutation of teacher pseudolabels"
+  },
+  "acceptance": {
+    "W2S": "paired bootstrap 95% lower bound for teacher MSE minus best W2S MSE is positive",
+    "early_stopping": "best epoch is before epoch 20 and paired bootstrap 95% lower bound for final MSE minus best MSE is positive",
+    "control": "paired bootstrap 95% lower bound for shuffled-control MSE minus best W2S MSE is positive",
+    "provenance": "all dataset/model hashes, seeds, scale, CPU allocation, and runtime are present"
+  },
+  "verifier": "repro/claims/claim5_real_architecture/verify.py",
+  "expected_verdict_if_all_checks_pass": "VERIFIED",
+  "otherwise": "BLOCKED, because one substituted experiment cannot falsify the broad empirical claim"
+}
