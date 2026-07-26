@@ -34,8 +34,26 @@ def main() -> None:
         "best_control_mse": float(np.mean((control - age) ** 2)),
     }
     reported = summary["results"]
+    # The experiment reports Torch float32 reductions while this independent
+    # checker deliberately recomputes from the CSV in NumPy float64.  Use a
+    # precision-aware comparison that is still at least four orders of
+    # magnitude tighter than any accepted scientific effect.
     numeric_match = all(
-        abs(recomputed[name] - float(reported[name])) < 1e-7
+        np.isclose(
+            recomputed[name],
+            float(reported[name]),
+            rtol=2e-7,
+            atol=1e-6,
+        )
+        for name in recomputed
+    )
+    corrupted_summary_rejected = all(
+        not np.isclose(
+            recomputed[name],
+            float(reported[name]) + 0.01,
+            rtol=2e-7,
+            atol=1e-6,
+        )
         for name in recomputed
     )
     checks = {
@@ -60,6 +78,7 @@ def main() -> None:
         ),
         "all_20_checkpoints_present": len(checkpoints) == 20,
         "raw_numbers_recompute": numeric_match,
+        "corrupted_summary_rejected": corrupted_summary_rejected,
         "real_W2S_confidence_interval_positive": reported[
             "real_architecture_W2S_verified"
         ],
