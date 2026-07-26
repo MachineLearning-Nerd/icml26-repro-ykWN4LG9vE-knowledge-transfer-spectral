@@ -48,6 +48,9 @@ def run(command: list[str], env: dict[str, str]) -> None:
 def main() -> None:
     started = time.perf_counter()
     env = os.environ.copy()
+    has_real_architecture_run = (
+        ROOT / "repro" / "claims" / "claim5_real_architecture"
+    ).is_dir()
     # Baseline numerical checks are designed for one core. The run is routed to
     # HF cpu-upgrade because its duration was uncertain before the first run.
     for name in (
@@ -64,10 +67,18 @@ def main() -> None:
         "paper": "2606.01292",
         "started_at_utc": dt.datetime.now(dt.timezone.utc).isoformat(),
         "fixed_entrypoint": "uv sync --frozen && uv run python repro/src/run_all.py",
-        "estimated_required_cores": 1,
+        "estimated_required_cores": (
+            24 if has_real_architecture_run else 1
+        ),
         "selected_backend": "hf",
         "selected_flavor": "cpu-upgrade",
-        "selection_reason": "uncertain baseline runtime; local execution prohibited by campaign policy",
+        "selection_reason": (
+            "real-architecture feature extraction requires 16 compute "
+            "threads plus 8 image workers; HF cpu-upgrade required"
+            if has_real_architecture_run
+            else "uncertain baseline runtime; local execution prohibited "
+            "by campaign policy"
+        ),
         "actual_logical_cpu_allocation": os.cpu_count(),
         "python": sys.version,
         "platform": platform.platform(),

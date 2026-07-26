@@ -42,6 +42,12 @@
         "children": []
       },
       {
+        "slug": "claim-5-real-architectures",
+        "title": "Claim 5 - real architectures and early stopping",
+        "file": "pages/claim-5-real-architectures/page.md",
+        "children": []
+      },
+      {
         "slug": "methods",
         "title": "Methods",
         "file": "pages/methods/page.md",

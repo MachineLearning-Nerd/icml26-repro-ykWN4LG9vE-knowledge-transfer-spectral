@@ -9,6 +9,7 @@
 | [Claim 3 - exact Theorem 4 quantifier](#/claim-3-theorem4-exact) |
 | [Historical rejected baseline - Claim 3 W2S denoising](#/claim-3-w2s-denoising) |
 | [Claim 4 - exact Theorem 5 rate audit](#/claim-4-theorem5-exact) |
+| [Claim 5 - real architectures and early stopping](#/claim-5-real-architectures) |
 | [Methods](#/methods) |
 | [Negative controls](#/negative-controls) |
 | [Conclusion](#/conclusion) |
