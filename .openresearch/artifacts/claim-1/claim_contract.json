@@ -1,0 +1,13 @@
+{
+  "claim": 1,
+  "paper": "2606.01292",
+  "source_anchor": "main.tex lines 451-553; Theorem 1, equation t2s_decomposition",
+  "contract": "Under the stated fourth-moment setting, the teacher-to-student risk bound separates propagated teacher error, student optimization error, and irreducible alignment bias; the learned head inherits teacher error one-to-one while the unlearned tail has a 2 delta^2 multiplier.",
+  "acceptance": {
+    "static_alignment_identity_max_error_below": 1e-10,
+    "noncommuting_subspace_systems_at_least": 9000,
+    "three_components_nonnegative": true,
+    "three_component_sum_matches_t2s_risk": true
+  },
+  "verdict": "VERIFIED"
+}

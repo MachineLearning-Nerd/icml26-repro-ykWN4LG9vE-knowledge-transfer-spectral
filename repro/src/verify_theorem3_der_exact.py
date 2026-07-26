@@ -10,6 +10,7 @@ are checked with fractions, so those checks have no floating-point tolerance.
 from fractions import Fraction as F
 import hashlib
 import json
+from pathlib import Path
 
 
 SOURCE_URL = "https://ar5iv.labs.arxiv.org/html/2606.01292"
@@ -19,6 +20,8 @@ SOURCE_SCOPE = (
     "(Eqs. 12-13); Appendix A.6 (Eqs. 113-117); Appendix C.2 (Eq. 173)"
 )
 PARENT_GUARD = "59374f8c1db0c670bbe6e96fa5d4b95e852a9b85"
+ROOT = Path(__file__).resolve().parents[2]
+OUT = ROOT / ".openresearch" / "artifacts" / "claim-2"
 
 
 def theorem_exponents(alpha_t: F, alpha_s: F, beta: F) -> tuple[F, F, F]:
@@ -163,6 +166,10 @@ def main() -> int:
         "all_checks_passed": True,
     }
     canonical = json.dumps(result, sort_keys=True, separators=(",", ":"))
+    OUT.mkdir(parents=True, exist_ok=True)
+    (OUT / "exact_der_certificate.json").write_text(
+        json.dumps(result, indent=2, sort_keys=True) + "\n"
+    )
     print(json.dumps(result, indent=2, sort_keys=True))
     print("RESULT_SHA256=" + hashlib.sha256(canonical.encode()).hexdigest())
     return 0

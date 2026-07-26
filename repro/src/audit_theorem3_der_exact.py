@@ -2,8 +2,14 @@
 """Independent audit of the Theorem 3 DER certificate; imports no primary code."""
 
 from fractions import Fraction
+import json
 import math
+from pathlib import Path
 import random
+
+
+ROOT = Path(__file__).resolve().parents[2]
+OUT = ROOT / ".openresearch" / "artifacts" / "claim-2"
 
 
 def slope(xs: list[float], ys: list[float]) -> float:
@@ -68,6 +74,19 @@ def main() -> int:
     }
     assert all(controls.values())
 
+    result = {
+        "independent_implementation": True,
+        "independent_audit_cases": exact_cases,
+        "power_law_tail_enclosures": tail_cases,
+        "max_log_log_slope_error": max_slope_error,
+        "worst_tail_enclosure_relative_width": worst_relative_width,
+        "negative_controls": controls,
+        "audit_passed": True,
+    }
+    OUT.mkdir(parents=True, exist_ok=True)
+    (OUT / "independent_checker.json").write_text(
+        json.dumps(result, indent=2, sort_keys=True) + "\n"
+    )
     print("independent_audit_cases:", exact_cases)
     print("power_law_tail_enclosures:", tail_cases)
     print("max_log_log_slope_error:", f"{max_slope_error:.3e}")

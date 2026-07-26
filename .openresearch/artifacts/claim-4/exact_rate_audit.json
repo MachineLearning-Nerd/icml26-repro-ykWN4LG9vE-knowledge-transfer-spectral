@@ -1,0 +1,67 @@
+{
+  "claim": "Theorem 5 optimal early-stopping and PGR rates",
+  "source_sha256": "4d29b2ae21c4611695532f6fd304b22f678139a19311e21e9b65d8a6d0b00089",
+  "source_anchors": "main.tex lines 350-356, 780-800, 2522-2609; Appendix B.4 lines 2323-2331",
+  "assumption_witness": {
+    "fourth_moment": "sum_k k^-2 < 1+integral_1^infinity x^-2 dx=2; Rademacher features therefore have ||Phi||^2<2, hence E[Phi Phi^T A Phi Phi^T]<=2 tr(A) I",
+    "fourth_moment_psi": 2,
+    "teacher_and_student_projections": "identity",
+    "low_intrinsic_target": "w*=e_1, k_dagger=1, exact zero tail",
+    "power_law_spectra": "lambda_k,T=lambda_k,S=k^-2",
+    "step_size": "gamma0=gamma0'=1/1000 satisfies the strict bound",
+    "self_distillation_scope": "Section 6 explicitly includes self-distillation as the limit case",
+    "checks": {
+      "spectral_trace_below_2": true,
+      "fourth_moment_bound_psi_2": true,
+      "teacher_projection_identity": true,
+      "student_projection_identity": true,
+      "zero_signal_tail_after_k_dagger_1": true,
+      "exact_power_law_alpha_2": true,
+      "strict_step_size_bound": true,
+      "self_distillation_is_in_stated_scope": true
+    },
+    "all_satisfied": true
+  },
+  "undefined_PGR_counterexample": {
+    "teacher_model": "identical to direct student",
+    "ground_truth_stream": "identical",
+    "initialization_and_schedule": "identical",
+    "teacher_minus_direct_student_risk": "0 pathwise",
+    "PGR_denominator": "0",
+    "PGR_defined": false
+  },
+  "stopping_rate_counterexample": {
+    "alpha_teacher": "2/1",
+    "alpha_student": "2/1",
+    "optimal_cutoff_N_exponent": "1/10",
+    "claimed_n_N_exponent": "1/10",
+    "required_n_N_exponent_from_cutoff_relation": "1/5",
+    "cutoff_N_exponent_at_claimed_n": "1/20",
+    "claimed_optimal_risk_N_exponent": "-9/10",
+    "risk_N_exponent_at_claimed_n": "-7/10",
+    "claimed_one_minus_PGR_N_exponent": "-2/5",
+    "one_minus_PGR_N_exponent_at_claimed_n": "-1/5",
+    "claimed_stopping_rate_is_consistent": false,
+    "claimed_risk_rate_follows_at_claimed_n": false,
+    "claimed_PGR_rate_follows_at_claimed_n": false
+  },
+  "PGR_definition_counterexample": {
+    "teacher_risk": "9/32",
+    "transfer_risk": "1/8",
+    "direct_student_risk": "1/32",
+    "W2S_strict": true,
+    "PGR": "5/8",
+    "one_minus_PGR_from_definition": "3/8",
+    "proof_substitution_transfer_over_teacher": "4/9",
+    "substitution_is_valid": false,
+    "exact_validity_condition": "R_S*(R_T-R_T2S)=0"
+  },
+  "negative_controls": {
+    "alpha_s_equal_one_removes_stopping_mismatch": true,
+    "oracle_direct_student_makes_PGR_substitution_valid": true,
+    "nonzero_direct_student_breaks_PGR_substitution": true,
+    "corrected_n_exponent_differs_for_alpha_s_2": true
+  },
+  "verdict": "FALSIFIED",
+  "all_checks_passed": true
+}

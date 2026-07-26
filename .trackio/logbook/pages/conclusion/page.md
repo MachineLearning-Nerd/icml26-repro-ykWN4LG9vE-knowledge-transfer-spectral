@@ -1,18 +1,21 @@
-# Conclusion
+# Claim-by-claim conclusion
 
+Previous live judged score: **6/10**. No score change is claimed before a new
+live judge verdict.
 
----
-<!-- trackio-cell
-{"type": "markdown", "id": "cell_867bbb4af01c", "created_at": "2026-07-20T08:22:11+00:00", "title": "Executive summary", "pinned": true, "pinned_at": "2026-07-20T08:22:11+00:00"}
--->
-FULL_GATE_READY: ykWN4LG9vE
+| Claim | Current evidence verdict | Confidence | What changed |
+| --- | --- | --- | --- |
+| 1 | VERIFIED | HIGH | Prior full-credit evidence preserved and rerun |
+| 2 | VERIFIED | HIGH | Prior exact certificate and finite run preserved and rerun |
+| 3 | FALSIFIED | HIGH | Exact `D=4096` assumption-satisfying counterexample replaces D=60 toy evidence |
+| 4 | FALSIFIED | HIGH | Exact PGR identity, undefined-denominator, and stopping-rate contradictions replace qualitative D=60 evidence |
+| 5 | VERIFIED within real W2S arm | MEDIUM | Paper-scale ResNet18→official CLIP ViT-B/32 UTKFace run plus stopping CI and controls |
 
-All three linear-model claims are verified by a clean-room CPU reproduction against the hash-pinned source. No author code was released; real-world backbone experiments are not claimed.
+Conservative projected score after publication: **8–10/10**. Best-supported
+possible score: **10/10 forecast**, not a judge result. The principal risk is
+Claim 5's explicitly unrun, CPU-prohibitive ViT-L/16 fine-tuning arm from the
+separate Figure 2 real-KD experiment.
 
-## Scope & cost
-
-| | This reproduction | Full replication |
-|---|---|---|
-| Scope | Three scored linear-model claims | Includes unavailable backbone experiments |
-| Hardware | Local CPU | GPU/data dependent |
-| Outcome | All three verified | Not claimed |
+Claims 3 and 4 are marked `FALSIFIED`, not “failed reproduction”: each
+counterexample directly checks the stated assumptions and quantified
+conclusion. Claim 5 is not described as covering every real-model panel.

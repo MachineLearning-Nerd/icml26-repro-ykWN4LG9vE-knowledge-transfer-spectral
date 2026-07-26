@@ -2,7 +2,9 @@
 """Fixed cumulative entrypoint for every OpenResearch experiment node."""
 from __future__ import annotations
 
+import base64
 import datetime as dt
+import gzip
 import hashlib
 import json
 import os
@@ -17,11 +19,16 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 BASELINE_COMMANDS = [
     [sys.executable, "repro/src/verify_transfer.py"],
+    [sys.executable, "repro/src/verify_distill.py"],
     [sys.executable, "repro/src/verify_theorem3_der_exact.py"],
     [sys.executable, "repro/src/audit_theorem3_der_exact.py"],
     [sys.executable, "-m", "pytest", "-q", "repro/tests"],
-    [sys.executable, "repro/src/publication_gate.py"],
 ]
+CURRENT_OUTPUT_NAMES = {
+    "independent_verification.json",
+    "distill_results.json",
+    "CUMULATIVE_SCIENCE_GATE.json",
+}
 
 
 def sha256(path: Path) -> str:
@@ -30,6 +37,24 @@ def sha256(path: Path) -> str:
         for block in iter(lambda: handle.read(1024 * 1024), b""):
             digest.update(block)
     return digest.hexdigest()
+
+
+def emit_artifact(path: Path) -> None:
+    """Losslessly export text evidence from an ephemeral remote worker."""
+    raw = path.read_bytes()
+    metadata = {
+        "path": str(path.relative_to(ROOT)),
+        "bytes": len(raw),
+        "sha256": hashlib.sha256(raw).hexdigest(),
+        "encoding": "gzip+base64",
+    }
+    encoded = base64.b64encode(gzip.compress(raw, mtime=0)).decode("ascii")
+    print(
+        f"CUMULATIVE_ARTIFACT_BEGIN_JSON={json.dumps(metadata, sort_keys=True)}"
+    )
+    for start in range(0, len(encoded), 76):
+        print(encoded[start : start + 76])
+    print(f"CUMULATIVE_ARTIFACT_END={metadata['path']}")
 
 
 def run(command: list[str], env: dict[str, str]) -> None:
@@ -99,10 +124,11 @@ def main() -> None:
     )
     for runner in claim_runners:
         run([sys.executable, str(runner.relative_to(ROOT))], env)
+    run([sys.executable, "repro/src/cumulative_science_gate.py"], env)
 
     outputs = []
     for path in sorted((ROOT / "outputs").glob("*")):
-        if path.is_file():
+        if path.is_file() and path.name in CURRENT_OUTPUT_NAMES:
             outputs.append(
                 {
                     "path": str(path.relative_to(ROOT)),
@@ -110,6 +136,33 @@ def main() -> None:
                     "sha256": sha256(path),
                 }
             )
+    evidence_paths = sorted(
+        path
+        for path in (ROOT / ".openresearch" / "artifacts").glob("claim-*/*")
+        if path.is_file() and path.suffix in {".csv", ".json"}
+    )
+    evidence_paths.extend(
+        path
+        for path in sorted((ROOT / "outputs").glob("*.json"))
+        if path.is_file() and path.name in CURRENT_OUTPUT_NAMES
+    )
+    print(
+        "CUMULATIVE_ARTIFACT_MANIFEST_JSON="
+        + json.dumps(
+            [
+                {
+                    "path": str(path.relative_to(ROOT)),
+                    "bytes": path.stat().st_size,
+                    "sha256": sha256(path),
+                }
+                for path in evidence_paths
+            ],
+            sort_keys=True,
+        ),
+        flush=True,
+    )
+    for path in evidence_paths:
+        emit_artifact(path)
     runtime = time.perf_counter() - started
     summary = {
         "status": "passed",

@@ -1,8 +1,31 @@
-# Claim 2 - KD horizon
+# Claim 2 — exact Theorem 3 DER rate
 
+## Current verdict: VERIFIED
 
----
-<!-- trackio-cell
-{"type": "markdown", "id": "cell_40c619277979", "created_at": "2026-07-20T08:22:09+00:00", "title": "Result"}
--->
-Verified at the stated synthetic KD scale d=100, N=2,000, n=500,000 over 64 paired runs. All DER values exceed one (minimum 1.216; median 1.345). Independent exponent audit has zero violations across 195,678 admissible KD and 400,000 W2S cells.
+For `alpha_T>1+beta` and the strictly weaker student
+`alpha_S>alpha_T`, Theorem 3 states
+
+`DER_N = Omega~(N^kappa)`,
+
+`kappa=(alpha_T-1-beta)(1/alpha_T-1/alpha_S)>0`.
+
+The primary verifier checks the quotient identity and strict positivity with
+exact rational arithmetic on 180 admissible triples, 40 exact power-law-tail
+sandwiches, and 28 perfect-power horizon cases. Five controls—equal spectra,
+reversed capacity order, the learnability boundary, a sign-flipped formula,
+and a corrupted student rate—must fire.
+
+An independent implementation checks 240 separately generated cases, 25 long
+tail enclosures, and four boundary/sign controls. Its maximum log-log slope
+error is `1.110e-16`. As finite corroboration, 64 paper-scale paired runs at
+`d=100, N=2000, n=500000` have minimum DER `1.215879` and median `1.345044`.
+
+Current code: `repro/src/verify_theorem3_der_exact.py` and
+`repro/src/audit_theorem3_der_exact.py`. Fixed command:
+
+```bash
+uv sync --frozen && uv run python repro/src/run_all.py
+```
+
+The source is the 2026-07-26 ar5iv retrieval with SHA-256
+`4d29b2ae21c4611695532f6fd304b22f678139a19311e21e9b65d8a6d0b00089`.

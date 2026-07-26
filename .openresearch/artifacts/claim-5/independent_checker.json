@@ -1,0 +1,24 @@
+{
+  "independent_implementation": true,
+  "recomputed_metrics": {
+    "teacher_mse": 327.44320203985757,
+    "best_w2s_mse": 90.92108250326893,
+    "final_w2s_mse": 104.00529049772857,
+    "best_control_mse": 356.1371241397417
+  },
+  "checks": {
+    "pinned_dataset_hashes": true,
+    "paper_scale_split": true,
+    "paper_architectures": true,
+    "model_hashes_present": true,
+    "all_20_checkpoints_present": true,
+    "raw_numbers_recompute": true,
+    "corrupted_summary_rejected": true,
+    "real_W2S_confidence_interval_positive": true,
+    "early_stopping_confidence_interval_positive": true,
+    "shuffled_control_fires": true,
+    "resource_policy_recorded": true
+  },
+  "verifier_passed": true,
+  "verdict": "VERIFIED"
+}

@@ -1,0 +1,14 @@
+{
+  "claim": 2,
+  "paper": "2606.01292",
+  "source_anchor": "main.tex lines 632-680; Theorem 3 and Appendix C.2",
+  "contract": "For alpha_T > 1 + beta and alpha_S > alpha_T, the direct-student to distilled-risk quotient has exponent kappa=(alpha_T-1-beta)(1/alpha_T-1/alpha_S)>0.",
+  "acceptance": {
+    "exact_rational_parameter_cases_at_least": 100,
+    "exact_tail_sandwiches_at_least": 25,
+    "perfect_power_horizon_cases_at_least": 20,
+    "all_negative_controls_fire": true,
+    "independent_audit_passes": true
+  },
+  "verdict": "VERIFIED"
+}
