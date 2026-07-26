@@ -1,0 +1,15 @@
+{
+  "claim_id": 4,
+  "paper_result": "Theorem 5",
+  "verbatim_contract": "Under Assumptions 1, 4, and 5, with the displayed optimal early-stopping sample size, the displayed optimal T2S risk holds and PGR equals 1 minus the displayed positive power of N.",
+  "quantifiers": {
+    "models_and_distributions": "all instances satisfying the cited assumptions; Section 6 explicitly includes self-distillation",
+    "asymptotic_variable": "teacher sample size N",
+    "stopping_rule": "the theorem's displayed n scaling",
+    "metric": "the PGR definition in Section 3.3"
+  },
+  "full_credit_rule": "FALSIFIED only if an assumption-satisfying instance makes the stated PGR undefined, or the theorem's own exact exponent relations contradict the displayed stopping/risk/PGR rates.",
+  "verifier": "repro/claims/claim4_theorem5_rate/verify.py",
+  "independent_checker": "repro/claims/claim4_theorem5_rate/audit.py",
+  "expected_verdict_if_checks_pass": "FALSIFIED"
+}

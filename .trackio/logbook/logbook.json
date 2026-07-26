@@ -36,6 +36,12 @@
         "children": []
       },
       {
+        "slug": "claim-4-theorem5-exact",
+        "title": "Claim 4 - exact Theorem 5 rate audit",
+        "file": "pages/claim-4-theorem5-exact/page.md",
+        "children": []
+      },
+      {
         "slug": "methods",
         "title": "Methods",
         "file": "pages/methods/page.md",
