@@ -3,12 +3,25 @@
 from __future__ import annotations
 
 import json
+import hashlib
 from fractions import Fraction
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[3]
 OUT = ROOT / ".openresearch" / "artifacts" / "claim-3"
+
+
+def compact_fraction(value: Fraction) -> dict:
+    """Keep exact provenance without flooding logs with million-digit integers."""
+    exact = f"{value.numerator}/{value.denominator}"
+    return {
+        "decimal_17_digits": format(float(value), ".17g"),
+        "sign": (value > 0) - (value < 0),
+        "numerator_digits": len(str(abs(value.numerator))),
+        "denominator_digits": len(str(value.denominator)),
+        "exact_fraction_sha256": hashlib.sha256(exact.encode()).hexdigest(),
+    }
 
 
 def schedule(total: int, gamma0: Fraction) -> list[Fraction]:
@@ -80,12 +93,12 @@ def certify(
         "covariance": "Sigma=1",
         "teacher_and_student_projection": "identity",
         "intrinsic_cutoff_k_dagger": 1,
-        "signal": str(signal),
-        "gaussian_noise_variance": str(noise_variance),
-        "teacher_step_gamma0": str(gamma0),
-        "teacher_mean_coefficient_c": str(coefficient),
-        "teacher_variance_V": str(teacher_variance),
-        "uniform_risk_gap_bracket_min": str(uniform_bracket_min),
+        "signal": compact_fraction(signal),
+        "gaussian_noise_variance": compact_fraction(noise_variance),
+        "teacher_step_gamma0": compact_fraction(gamma0),
+        "teacher_mean_coefficient_c": compact_fraction(coefficient),
+        "teacher_variance_V": compact_fraction(teacher_variance),
+        "uniform_risk_gap_bracket_min": compact_fraction(uniform_bracket_min),
         "student_risk_strictly_above_teacher_for_every_finite_n": theorem_contradicted,
         "limit_n_to_infinity": "student risk approaches teacher risk from above",
         "verdict": "FALSIFIED" if theorem_contradicted else "NOT_ESTABLISHED",
@@ -93,9 +106,22 @@ def certify(
 
 
 def main() -> None:
+    gamma0 = Fraction(1, 1000)
+    signal = Fraction(1)
+    unit_noise_c, unit_noise_variance = teacher_moments(
+        total=256,
+        gamma0=gamma0,
+        signal=signal,
+        noise_variance=Fraction(1),
+    )
+    # Teacher variance is linear in label-noise variance. This exact choice
+    # makes V=2*c*(1-c), so the witness bracket becomes strictly negative.
+    high_noise_variance = (
+        2 * unit_noise_c * (1 - unit_noise_c) / unit_noise_variance
+    )
     witness = certify(
-        gamma0=Fraction(1, 1000),
-        signal=Fraction(1),
+        gamma0=gamma0,
+        signal=signal,
         noise_variance=Fraction(1, 1_000_000),
     )
     controls = {
@@ -116,9 +142,9 @@ def main() -> None:
             full_expressivity=False,
         )["assumptions_satisfied"],
         "high_noise_breaks_counterexample": not certify(
-            gamma0=Fraction(1, 1000),
-            signal=Fraction(1),
-            noise_variance=Fraction(10),
+            gamma0=gamma0,
+            signal=signal,
+            noise_variance=high_noise_variance,
         )["student_risk_strictly_above_teacher_for_every_finite_n"],
     }
     result = {
@@ -127,6 +153,7 @@ def main() -> None:
         "source_anchor": "main.tex lines 733-745; Appendix D.1 lines 2447-2523",
         "exact_witness": witness,
         "negative_controls": controls,
+        "high_noise_control_variance": compact_fraction(high_noise_variance),
         "all_checks_passed": (
             witness["verdict"] == "FALSIFIED" and all(controls.values())
         ),
