@@ -1,0 +1,15 @@
+{
+  "claim_id": 3,
+  "paper_result": "Theorem 4",
+  "verbatim_contract": "Under Assumptions 1, 4, and 5, there exists a threshold n_0 such that for all n > n_0, E[R_T2S(N,n)] < E[R_T(N)].",
+  "quantifiers": {
+    "models_and_distributions": "all satisfying the cited assumptions and global SGD stability conditions",
+    "existence": "there exists n_0",
+    "student_horizon": "every finite n greater than n_0",
+    "comparison": "strict expected population-risk inequality"
+  },
+  "full_credit_rule": "FALSIFIED only if one non-vacuous instance satisfies every stated assumption yet has E[R_T2S(N,n)] >= E[R_T(N)] for arbitrarily large n.",
+  "verifier": "repro/claims/claim3_theorem4_quantifier/verify.py",
+  "independent_checker": "repro/claims/claim3_theorem4_quantifier/audit.py",
+  "expected_verdict_if_checks_pass": "FALSIFIED"
+}

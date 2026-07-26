@@ -24,8 +24,14 @@
         "children": []
       },
       {
+        "slug": "claim-3-theorem4-exact",
+        "title": "Claim 3 - exact Theorem 4 quantifier",
+        "file": "pages/claim-3-theorem4-exact/page.md",
+        "children": []
+      },
+      {
         "slug": "claim-3-w2s-denoising",
-        "title": "Claim 3 - W2S denoising",
+        "title": "Historical rejected baseline - Claim 3 W2S denoising",
         "file": "pages/claim-3-w2s-denoising/page.md",
         "children": []
       },
