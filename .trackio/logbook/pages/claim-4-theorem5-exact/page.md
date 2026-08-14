@@ -1,6 +1,6 @@
 # Claim 4 — exact Theorem 5 PGR/rate audit
 
-## Current verdict: FALSIFIED
+## Current verdict: FALSIFIED_AS_WRITTEN
 
 The displayed theorem is inconsistent with its own PGR definition and
 cutoff relation.
@@ -21,8 +21,7 @@ for the theorem route and `0.10` for the reconstruction. All four negative
 controls fire.
 
 Current verifier: `repro/claims/claim4_theorem5_rate/verify.py`; independent
-checker: `audit.py`. Formal run `36f6aceb-e4c0-4f7f-abe3-37f9d26b4736`,
-Git `d255238`, HF `cpu-upgrade`, 107.463 s cumulative.
+checker: `audit.py`. Exact evidence is committed in the Claim 4 bundle.
 
 ## Evaluator bundle
 

@@ -1,6 +1,6 @@
 # Claim 4 — exact Theorem 5 PGR/rate audit
 
-## Current verdict: FALSIFIED
+## Current verdict: FALSIFIED_AS_WRITTEN
 
 The displayed theorem is inconsistent with its own PGR definition and
 cutoff relation.
@@ -21,8 +21,8 @@ for the theorem route and `0.10` for the reconstruction. All four negative
 controls fire.
 
 Current verifier: `repro/claims/claim4_theorem5_rate/verify.py`; independent
-checker: `audit.py`. Formal run `36f6aceb-e4c0-4f7f-abe3-37f9d26b4736`,
-Git `d255238`, HF `cpu-upgrade`, 107.463 s cumulative.
+checker: `audit.py`. The exact witness, independent checker, and cutoff sweep
+are committed in the [Claim 4 evidence bundle](../../evidence/claim-4/exact_rate_audit.json).
 
 ## Evaluator bundle
 
@@ -41,9 +41,8 @@ Git `d255238`, HF `cpu-upgrade`, 107.463 s cumulative.
   [limitations](../../evidence/claim-4/limitations.md), and
   [evaluation record](../../evidence/claim-4/EVAL.md)
 
-The final cumulative run `de09d92b-ea82-4644-9341-d390cc9785b0` at Git
-`e1a3b3a3248f1386118f3c3303e7412859cd72bd` reran all three
-contradictions, four controls, the independent audit, and cumulative gate.
+The cumulative publication gate checks all three contradictions, four controls,
+the independent audit, and the committed evidence from a fresh clone.
 
 ## Historical rejected baseline
 

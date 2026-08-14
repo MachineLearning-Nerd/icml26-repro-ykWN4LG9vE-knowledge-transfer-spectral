@@ -1,6 +1,6 @@
 # Claim 3 — exact Theorem 4 quantifier
 
-## Current verdict: FALSIFIED
+## Current verdict: FALSIFIED_AS_WRITTEN
 
 Theorem 4 says that under Assumptions 1, 4, and 5 there exists `n_0` such
 that **every** `n>n_0` has expected T2S risk strictly below teacher risk.
@@ -23,10 +23,9 @@ non-low-dimensional embedding, and a high-noise value that destroys the
 witness. Current verifier: `repro/claims/claim3_theorem4_quantifier/verify.py`;
 independent checker: `audit.py`.
 
-Formal evidence: run `0dfe0a37-1914-46f3-8024-e9f5f3db3ffa`, Git `cedf9ad`,
-HF `cpu-upgrade`, 73.176 s cumulative. A corrected theorem could add a
-strictly positive-spectrum condition; no such condition appears in the
-quantified statement.
+Formal evidence is committed in the exact witness, independent checker, and
+horizon audit. A corrected theorem could add a strictly positive-spectrum
+condition; no such condition appears in the quantified statement.
 
 ## Evaluator bundle
 

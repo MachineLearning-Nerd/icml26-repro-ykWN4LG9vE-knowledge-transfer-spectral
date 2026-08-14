@@ -1,6 +1,6 @@
 # Claim 5 — real architectures and early stopping
 
-## Current verdict: VERIFIED
+## Current verdict: VERIFIED_SCOPED_WITH_PROTOCOL_LIMITS
 
 The prior judge found no real-model evidence. The current route runs the
 paper's UTKFace W2S setup at its stated 20,000/2,000 scale: frozen
@@ -28,11 +28,10 @@ The checker imports no experiment code, recomputes all displayed MSEs from
 the 2,000-row CSV in float64, confirms all 20 checkpoints, and rejects a
 `+0.01` corrupted summary. All 11 checks pass.
 
-Final cumulative evidence: run `de09d92b-ea82-4644-9341-d390cc9785b0`, Git
-`e1a3b3a3248f1386118f3c3303e7412859cd72bd`, HF `cpu-upgrade`;
-24 useful cores estimated, 64 logical CPUs allocated; the Claim 5 command
-took 1,807.543 s and the fixed command took 1,912.079 s (32m34s including
-remote setup).
+The committed cumulative evidence records 24 useful cores estimated, 64
+logical CPUs allocated, and a roughly 30-minute CPU-only run. The current gate
+recomputes the displayed metrics from the committed raw predictions instead of
+requiring that remote runtime.
 
 Raw SHA-256:
 
@@ -65,6 +64,7 @@ Raw SHA-256:
 
 The paper does not publish exact split indices, so seed `260601295` pins
 them. The 20-epoch stopping audit extends the stated five-epoch UTKFace
-protocol. Together with the preserved synthetic evidence, this directly
-tests the claim's missing real-model and early-stopping requirements. It does
-not claim the separate CPU-prohibitive ViT-L/16 fine-tuning panel of Figure 2.
+protocol. Together with the preserved synthetic evidence, this directly tests
+the declared real-model and early-stopping route. It does not claim the
+separate CPU-prohibitive ViT-L/16 fine-tuning panel of Figure 2, and unpublished
+split indices prevent a strict paper-wide empirical reproduction claim.

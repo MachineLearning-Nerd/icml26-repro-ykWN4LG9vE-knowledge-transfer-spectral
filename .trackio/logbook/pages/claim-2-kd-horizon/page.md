@@ -1,6 +1,6 @@
 # Claim 2 — exact Theorem 3 DER rate
 
-## Current verdict: VERIFIED
+## Current verdict: VERIFIED_SCOPED
 
 For `alpha_T>1+beta` and the strictly weaker student
 `alpha_S>alpha_T`, Theorem 3 states
@@ -45,6 +45,5 @@ The source is the 2026-07-26 ar5iv retrieval with SHA-256
   [limitations](../../evidence/claim-2/limitations.md), and
   [evaluation record](../../evidence/claim-2/EVAL.md)
 
-Final cumulative run `de09d92b-ea82-4644-9341-d390cc9785b0`, Git
-`e1a3b3a3248f1386118f3c3303e7412859cd72bd`, reran both exact routes,
-all controls, and the fail-closed gate.
+The current gate validates the committed exact certificate, independent
+checker, controls, and finite corroboration from a fresh clone.

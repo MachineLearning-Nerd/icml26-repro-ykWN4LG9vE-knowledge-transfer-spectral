@@ -1,12 +1,15 @@
-# Weak-to-strong distillation: risk decomposition & recovery
+# HISTORICAL_REJECTED_BASELINE — reduced-scale W2S recovery
 
 ---
 <!-- trackio-cell
 {"type": "markdown", "id": "cell_kd_i", "created_at": "2026-07-22T05:00:00+00:00", "title": "Thm 1 decomposition + Thm 4 weak-to-strong + Thm 5 recovery"}
 -->
-### Claims — VERIFIED by executed clean-room reproduction
+### Historical evidence — not current claim evidence
 
-Linear-Gaussian spectral model (the paper's setting). A weak teacher (ridge on few noisy samples) is distilled into a smoother student (spectral truncation). **Thm 4**: the student beats the teacher by filtering high-frequency estimation variance. **Thm 1**: the T2S risk decomposes into non-negative components summing exactly to the risk. **Thm 5**: at the optimal filter the student recovers most of the teacher→oracle gap (PGR), and the optimal filter grows with teacher data.
+This D=60 spectral-filter sweep is retained for provenance only. It does not
+test the current Theorem 4 universal quantifier or Theorem 5 rate contract.
+Use the exact Claim 3 and Claim 4 pages for the current verdicts; use Claim 5
+for the paper-scale real-architecture route.
 
 ---
 <!-- trackio-cell
@@ -48,4 +51,5 @@ verdict: supports
 <!-- trackio-cell
 {"type": "markdown", "id": "cell_kd_c", "created_at": "2026-07-22T05:00:00+00:00", "title": "Interpretation"}
 -->
-**VERIFIED.** In the paper's linear-Gaussian spectral model: **(Thm 4)** a smoother student trained *only on the weak teacher's labels* beats the teacher — at the best spectral filter (k*=8) the student risk is `0.025` vs the teacher's `0.155`, weak-to-strong holding at **every** filter and every teacher-data size N — the mechanism is spectral denoising of the teacher's high-frequency estimation variance. **(Thm 1)** the T2S excess risk decomposes into non-negative components — propagated teacher error `0.0198` + student optimization `0` + alignment bias `0.0056` — summing **exactly** to the risk `0.0254`. **(Thm 5)** at the optimal filter the student recovers a large fraction of the teacher→oracle gap (`PGR = 0.87`, and `>0.5` for all N from 40–800), and the optimal filter `k*` **grows with N** (5→8→12→16), reproducing the paper's optimal-early-stopping performance-recovery behaviour.
+Historical output from the reduced-scale route follows below. It is not a
+current verdict and is deliberately superseded by the exact Claim 3/4 audits.

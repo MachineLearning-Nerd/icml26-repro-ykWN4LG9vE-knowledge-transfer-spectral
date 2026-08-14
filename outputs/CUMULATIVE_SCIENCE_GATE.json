@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "paper": {
-    "arxiv_id": "2606.01292",
-    "openreview_id": "ykWN4LG9vE"
+    "openreview_id": "ykWN4LG9vE",
+    "arxiv_id": "2606.01292"
   },
   "checks": {
     "claim1_static_identity": true,

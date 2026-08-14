@@ -1,24 +1,15 @@
 # Claim-by-claim conclusion
 
-Previous live judged score: **6/10**. No score change is claimed before a new
-live judge verdict.
+Previous live judged score: `6/10`. No score change or score forecast is
+claimed.
 
-| Claim | Current evidence verdict | Confidence | What changed |
-| --- | --- | --- | --- |
-| 1 | VERIFIED | HIGH | Prior full-credit evidence preserved and rerun |
-| 2 | VERIFIED | HIGH | Prior exact certificate and finite run preserved and rerun |
-| 3 | FALSIFIED | HIGH | Exact `D=4096` assumption-satisfying counterexample replaces D=60 toy evidence |
-| 4 | FALSIFIED | HIGH | Exact PGR identity, undefined-denominator, and stopping-rate contradictions replace qualitative D=60 evidence |
-| 5 | VERIFIED | MEDIUM | Paper-scale ResNet18→official CLIP ViT-B/32 UTKFace run plus stopping CI and controls |
+| Claim | Evidence verdict | Scope |
+| --- | --- | --- |
+| 1 | `VERIFIED_SCOPED` | Finite decomposition and identity audit |
+| 2 | `VERIFIED_SCOPED` | Exact DER certificate and independent audit |
+| 3 | `FALSIFIED_AS_WRITTEN` | Exact admissible Theorem 4 counterexample |
+| 4 | `FALSIFIED_AS_WRITTEN` | Exact Theorem 5 definition/rate contradictions |
+| 5 | `VERIFIED_SCOPED_WITH_PROTOCOL_LIMITS` | ResNet18→CLIP ViT-B/32 W2S route |
 
-Conservative projected score after publication: **8–10/10**. Best-supported
-possible score: **10/10 forecast**, not a judge result. The principal risk is
-Claim 5's explicitly unrun, CPU-prohibitive ViT-L/16 fine-tuning arm from the
-separate Figure 2 real-KD experiment.
-
-Claims 3 and 4 are marked `FALSIFIED`, not “failed reproduction”: each
-counterexample directly checks the stated assumptions and quantified
-conclusion. Claim 5 is not described as covering every real-model panel.
-
-Release status: **awaiting live judge after publication**. This phrase is a
-workflow status only; it is not a score change.
+Strict paper-wide status: `NOT_READY`, because exact UTKFace split indices are
+unpublished and the separate ViT-L/16 fine-tuning arm was not run.

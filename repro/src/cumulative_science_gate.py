@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fail-closed cumulative science gate for the five current claim verdicts."""
+"""Fail-closed gate over the committed five-claim evidence bundle."""
 from __future__ import annotations
 
 import json
@@ -7,32 +7,29 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[2]
-ARTIFACTS = ROOT / ".openresearch" / "artifacts"
+EVIDENCE = ROOT / "evidence"
 
 
 def read(path: Path) -> dict:
     return json.loads(path.read_text())
 
 
+def row_count(path: Path) -> int:
+    with path.open() as handle:
+        return sum(1 for _ in handle)
+
+
 def main() -> None:
     baseline = read(ROOT / "outputs" / "independent_verification.json")
-    decomposition = read(ROOT / "outputs" / "distill_results.json")
-    claim2 = read(ARTIFACTS / "claim-2" / "exact_der_certificate.json")
-    claim2_checker = read(
-        ARTIFACTS / "claim-2" / "independent_checker.json"
-    )
-    claim3 = read(ARTIFACTS / "claim-3" / "exact_counterexample.json")
-    claim3_checker = read(
-        ARTIFACTS / "claim-3" / "independent_checker.json"
-    )
-    claim4 = read(ARTIFACTS / "claim-4" / "exact_rate_audit.json")
-    claim4_checker = read(
-        ARTIFACTS / "claim-4" / "independent_checker.json"
-    )
-    claim5 = read(ARTIFACTS / "claim-5" / "experiment_summary.json")
-    claim5_checker = read(
-        ARTIFACTS / "claim-5" / "independent_checker.json"
-    )
+    decomposition = read(EVIDENCE / "claim-1" / "distill_results.json")
+    claim2 = read(EVIDENCE / "claim-2" / "exact_der_certificate.json")
+    claim2_checker = read(EVIDENCE / "claim-2" / "independent_checker.json")
+    claim3 = read(EVIDENCE / "claim-3" / "exact_counterexample.json")
+    claim3_checker = read(EVIDENCE / "claim-3" / "independent_checker.json")
+    claim4 = read(EVIDENCE / "claim-4" / "exact_rate_audit.json")
+    claim4_checker = read(EVIDENCE / "claim-4" / "independent_checker.json")
+    claim5 = read(EVIDENCE / "claim-5" / "experiment_summary.json")
+    claim5_checker = read(EVIDENCE / "claim-5" / "independent_checker.json")
 
     checks = {
         "claim1_static_identity": baseline[
@@ -82,31 +79,34 @@ def main() -> None:
             and claim5_checker["verifier_passed"]
             and all(claim5_checker["checks"].values())
         ),
-        "claim5_raw_predictions": sum(
-            1
-            for _ in (
-                ARTIFACTS / "claim-5" / "test_predictions.csv"
-            ).open()
+        "claim5_raw_predictions": row_count(
+            EVIDENCE / "claim-5" / "test_predictions.csv"
         )
         == 2_001,
         "historical_toy_not_default": (
-            "Historical rejected baseline"
-            in (
-                ROOT / ".trackio" / "logbook" / "pages" / "index.md"
-            ).read_text()
+            "HISTORICAL_REJECTED_BASELINE"
+            in (ROOT / "pages" / "claim-w2s-recovery" / "page.md").read_text()
+            and "Historical rejected baseline"
+            in (ROOT / "pages" / "index.md").read_text()
         ),
     }
     result = {
-        "paper": "2606.01292",
+        "schema_version": 1,
+        "paper": {
+            "openreview_id": "ykWN4LG9vE",
+            "arxiv_id": "2606.01292",
+        },
         "checks": checks,
         "claim_verdicts": {
-            "claim_1": "VERIFIED",
-            "claim_2": "VERIFIED",
-            "claim_3": "FALSIFIED",
-            "claim_4": "FALSIFIED",
-            "claim_5": "VERIFIED",
+            "claim_1": "VERIFIED_SCOPED",
+            "claim_2": "VERIFIED_SCOPED",
+            "claim_3": "FALSIFIED_AS_WRITTEN",
+            "claim_4": "FALSIFIED_AS_WRITTEN",
+            "claim_5": "VERIFIED_SCOPED_WITH_PROTOCOL_LIMITS",
         },
         "science_gate_passed": all(checks.values()),
+        "evidence_source": "committed/evidence",
+        "hidden_runtime_dependency": False,
     }
     target = ROOT / "outputs" / "CUMULATIVE_SCIENCE_GATE.json"
     target.write_text(json.dumps(result, indent=2) + "\n")

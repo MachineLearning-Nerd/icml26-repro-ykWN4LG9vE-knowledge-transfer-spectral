@@ -1,6 +1,6 @@
 # Claim 2 — exact Theorem 3 DER rate
 
-## Current verdict: VERIFIED
+## Current verdict: VERIFIED_SCOPED
 
 For `alpha_T>1+beta` and the strictly weaker student
 `alpha_S>alpha_T`, Theorem 3 states
@@ -21,7 +21,9 @@ error is `1.110e-16`. As finite corroboration, 64 paper-scale paired runs at
 `d=100, N=2000, n=500000` have minimum DER `1.215879` and median `1.345044`.
 
 Current code: `repro/src/verify_theorem3_der_exact.py` and
-`repro/src/audit_theorem3_der_exact.py`. Fixed command:
+`repro/src/audit_theorem3_der_exact.py`. Their exact outputs are preserved in
+the [Claim 2 evidence bundle](../../evidence/claim-2/exact_der_certificate.json).
+Fixed command:
 
 ```bash
 uv sync --frozen && uv run python repro/src/run_all.py
@@ -45,6 +47,5 @@ The source is the 2026-07-26 ar5iv retrieval with SHA-256
   [limitations](../../evidence/claim-2/limitations.md), and
   [evaluation record](../../evidence/claim-2/EVAL.md)
 
-Final cumulative run `de09d92b-ea82-4644-9341-d390cc9785b0`, Git
-`e1a3b3a3248f1386118f3c3303e7412859cd72bd`, reran both exact routes,
-all controls, and the fail-closed gate.
+The current publication gate validates the committed exact certificate,
+independent checker, controls, and finite corroboration from a fresh clone.

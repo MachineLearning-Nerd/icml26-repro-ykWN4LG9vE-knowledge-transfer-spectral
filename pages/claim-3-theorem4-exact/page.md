@@ -1,6 +1,6 @@
 # Claim 3 — exact Theorem 4 quantifier
 
-## Current verdict: FALSIFIED
+## Current verdict: FALSIFIED_AS_WRITTEN
 
 Theorem 4 says that under Assumptions 1, 4, and 5 there exists `n_0` such
 that **every** `n>n_0` has expected T2S risk strictly below teacher risk.
@@ -23,10 +23,11 @@ non-low-dimensional embedding, and a high-noise value that destroys the
 witness. Current verifier: `repro/claims/claim3_theorem4_quantifier/verify.py`;
 independent checker: `audit.py`.
 
-Formal evidence: run `0dfe0a37-1914-46f3-8024-e9f5f3db3ffa`, Git `cedf9ad`,
-HF `cpu-upgrade`, 73.176 s cumulative. A corrected theorem could add a
-strictly positive-spectrum condition; no such condition appears in the
-quantified statement.
+Formal evidence is committed in the exact witness, independent checker, and
+horizon CSV below. A corrected theorem could add a strictly positive-spectrum
+condition; no such condition appears in the quantified statement. This result
+falsifies the theorem as written; it does not claim that every W2S experiment
+fails.
 
 ## Evaluator bundle
 
@@ -45,9 +46,8 @@ quantified statement.
   [limitations](../../evidence/claim-3/limitations.md), and
   [evaluation record](../../evidence/claim-3/EVAL.md)
 
-The final cumulative run `de09d92b-ea82-4644-9341-d390cc9785b0` at Git
-`e1a3b3a3248f1386118f3c3303e7412859cd72bd` reran the counterexample,
-five falsification controls, independent audit, and cumulative gate.
+The cumulative publication gate checks the exact witness, all five controls,
+the independent audit, and the committed evidence from a fresh clone.
 
 ## Historical rejected baseline
 
